@@ -1,0 +1,13 @@
+URLLIST
+; file with top line "URLLIST"  is URL list file
+; URLlist file can specify multiple url of Time List file
+; line which start with ";" is comment
+;
+; yearly sample
+https://www.dropbox.com/s/uxsq396dx7xzyg1/MTVyearSample.txt?dl=0
+; monthly sample
+https://www.dropbox.com/s/o1t0odik8jmhx0d/MTVmonthSample.txt?dl=0
+; world time sample
+https://www.dropbox.com/s/9y2hufx4lbv1qie/MTVworldSample.txt?dl=0
+; daily sample
+https://www.dropbox.com/s/b79psvjl7kwhbc0/MTVdailySample.txt?dl=0

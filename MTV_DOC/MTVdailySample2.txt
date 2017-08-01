@@ -1,0 +1,12 @@
+Daily import
+;   sample of import other file
+!Da;Mid Night;0;00
+!Da;Noon;12;00
+@mtv;https://dl.dropboxusercontent.com/s/b79psvjl7kwhbc0/MTVdailySample.txt
+@ics;https://www.dropbox.com/s/2hg1ot99kwzx3u3/sample.ics?dl=0
+;
+; line which start with "@" is import other file command
+;@mtv;URL  ... import MultiTimeViewer TimeList 
+;@ics;URL   ... import iCalendar format
+;@tbl;URL   ... import NextTrain format
+;@;URL  ... import file detect format by file extension

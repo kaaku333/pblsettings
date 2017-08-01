@@ -1,0 +1,29 @@
+Monthly
+; top line is title
+; line which start with ";" is comment
+; line which start with "!" is time data
+!M;1st day ;1
+!M;day 10;10
+!M;day 20 noon;20;12;0
+!W; Sunday 18:00;0;0;18;0
+!W; Monday;1
+!W; Tuesday;2
+!W; Wednesday;3
+!W; Thursday;4
+!W; Friday;5
+!W;Saturday;6
+!W;1st Friday;5;1
+!W;3rd Friday Night;5;3;18:0
+;
+; !M;title;day;hour;min
+;   Monthly event
+;      day  ... 1 to 31
+;      hour ... 0 to 23 (optional)
+;      min ... 0 to 59 (optional)
+;
+; !W;title;day of week;nth;hour;min
+;   Weekly event
+;       day of week ... 0(sunday) to 6(saturday)
+;       nth  ...  0(every week), 1to 5 (optional)
+;       hour ... 0 to 23 (optional)
+;       min ... 0 to 59 (optional)

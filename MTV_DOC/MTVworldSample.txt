@@ -1,0 +1,33 @@
+World Time
+; top line is title
+; line which start with ";" is comment
+; line which start with "!" is time data
+!Ou;Honolulu HST;-10;0
+!Ou;L.A. PST;-8;0
+!Ou;L.A. st PDT;-7;0
+!Ou;Denver MST;-7;0
+!Ou;Denver st MDT;-6;0
+!Ou;Chicago CST;-6;0
+!Ou;Chicago st CDT;-5;0
+!Ou;New York EST;-5;0
+!Ou;New York st EDT;-4;0
+!Ou;Rio de Janeiro BRT;-3;0
+!Ou;UTC;0;0
+!Ou;London GMT;0;0
+!Ou;London st BST;1;0
+!Ou;Paris CET;1;0
+!Ou;Paris st CEST;2;0
+!Ou;Istanbul EET;2;0
+!Ou;Istanbul st EEST;3;0
+!Ou;Moscow MSK;3;0
+!Ou;Mumbai IST;5;30
+!Ou;Tokyo JST;9;0
+!Ou;Sydney AEST;10;0
+!Ou;Sydney st AEDT;11;0
+!Ou;Auckland NZST;12;0
+!Ou;Auckland st NZDT;13;0
+;
+; !Ou;title;hour offset;min offset
+;    Offest Time of UTF hour
+;       hour offset ...   -23 to 23
+;       min offset ...   0 to 59
