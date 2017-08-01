@@ -1,11 +1,15 @@
 # Multi Time Viewer 説明書
 
+目次
+
 [TOC]
 
 ## Multi Time Viewer とは
 
-Multi Time Viewer は任意のイベントまでの時間を表示するアプリです。  
-たとえば、下記のようないろいろな時間を表示するのに使えます。
+Multi Time Viewer は任意のイベントまでの時間を表示する Pebble アプリです。  
+Pebble Time, Pebble Time Round, Pebble 2 で使えます。
+
+以下のようないろいろな時間を一覧表示するのに使えます。
 
 - 毎日同じ時間に繰り返すルーティンの時間  
   家を出る時間、昼食の時間など
@@ -45,7 +49,6 @@ Multi Time Viewer は任意のイベントまでの時間を表示するアプ�
   + [現時刻からの任意の時間オフセットした時間(現地時間およびUTC時間)](MTVworldSample.txt)
   + [他のフォーマットのファイルの読み込み](MTVdailySample2.txt)
 
-  フォーマット詳細は  
 
 - iCalendar フォーマット(拡張子.ics)  
   一般的な予定表アプリで使われる共通フォーマットデータ。  
@@ -73,14 +76,32 @@ Multi Time Viewer は任意のイベントまでの時間を表示するアプ�
   Watchface によくある、スマホ Pebble App との接続が切れたときに振動する機能です。
 
 
-## 操作方法
+## 通常画面の表示内容と操作方法
 
-
+  + 先頭行表示  
+    現在時刻、月日、スマホ接続状態
+  + リスト表示  
+    タイトル一覧、アイテム一覧の順に連続して並んでいます
+    * タイトル一覧  
+      ロードした予定時刻ファイルのタイトルの一覧。最大５タイトルまで保持できます
+    * アイテム一覧  
+      ロードした予定時刻ファイルのアイテムの一覧。最大４０アイテムまで保持できます
+  + 操作  
+    - Enter  
+      タイトルで押したときはタイトルメニュー表示。アイテムで押したときは一般メニュー表示
+    - Enter 長押し  
+      一般メニューの長押し設定で設定したメニュー項目を直接実行する
+    - Up  
+       リストを上にスクロールする
+    - Down  
+       リストを下にスクロールする
+    - Back  
+       本アプリを終了する
 
 
 ## タイトルメニュー  
 
-予定時刻ファイルのタイトルで ENTER ボタンを押すと表示されるメニュー。  
+通常画面のいずれかのタイトルで ENTER ボタンを押すと表示されるメニュー。  
 
 - LOAD  
   該当予定時刻ファイルを再度ロードします。
@@ -101,8 +122,8 @@ Multi Time Viewer は任意のイベントまでの時間を表示するアプ�
 
 ## 一般メニュー  
 
-予定で ENTER ボタンを押すと表示されるメニュー。  
-設定画面で並び替えができます。
+通常画面のいずれかのアイテムで ENTER ボタンを押すと表示されるメニュー。  
+並び順はスマホ上の設定画面で並び替えができます。
 
 - Item Information  
   アイテム情報を表示する
@@ -156,3 +177,36 @@ Multi Time Viewer は任意のイベントまでの時間を表示するアプ�
 
 ## 設定画面 
 
+スマホの Pebble App の Apps の Multi Time Viewer を選んで表示する設定画面。
+
+
+### LOAD TIMELIST
+ + TimeList URL  
+   ロードしたい予定時刻ファイルが置いてある URL を入力する。
+   その後 SAVE を押すと Pebble に該当予定時刻ファイルがダウンロードされる。
+ + History  
+   過去にロードした予定時刻ファイルの履歴。再度ロードしたいときに選ぶ。５個以上覚えておける。
+ + What is TimeList  
+   予定時刻ファイルの簡単な説明。
+ + TimeList Sample  
+   TimeList のサンプル。Put URL で TimeList URL に URL 入力。 Show File でサンプルテキストを表示。
+ + How to add TimeList  
+   TimeList の登録方法の手順例。
+
+### DELETE TIMELIST
+ + Delete Selected History  
+   History でタイトルを選んでチェックしてから SAVE を押すと、該当のタイトルが履歴から削除される。
+ + Delete All History  
+   チェックしてから SAVE を押すと、History の履歴を全削除する。
+ + Delete Loal added items in Pebble  
+   Pebble で直接追加したアラームアイテムを全て削除する。
+ + Delete All in Pebble  
+   Pebble 上のタイトルとアイテムを全て削除する。
+
+### SORT MENU ITEMS
+ + Menu Items  
+   一般メニューの項目の並びをドラッグアンドドロップで変更して SAVE を押すと、Pebbleの一般メニューの並びに反映される。
+ + Reset Item Sorting  
+   Reset を押すと、一般メニューの項目の並び順を初期状態に戻す。
+
+以上
