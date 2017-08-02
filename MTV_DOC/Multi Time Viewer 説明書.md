@@ -209,4 +209,29 @@ Pebble Time, Pebble Time Round, Pebble 2 で使えます。
  + Reset Item Sorting  
    Reset を押すと、一般メニューの項目の並び順を初期状態に戻す。
 
+## メッセージ
+
+表示されるメッセージの意味です。
+
+- Data Loaded  
+  データが正常にロードできました
+- Data Loaded but overflowed  
+  データはロードできましたが、アイテム数が多すぎて後ろの方のアイテムはカットしました
+- All Title Deleted  
+  全タイトルを削除しました
+- Local Alarm item Deleted  
+  Pebbleで直接追加したアラームアイテムを削除しました
+- Server Timeout
+- File not found
+- Server error  
+  サーバーからデータロードできませんでした。リトライしてみてください
+
+## 注意事項
+
+- 一度にメモリ上に保持できるアイテム数は最大40個です。  
+  多すぎてアラームアイテムを追加できない場合は、不要なアイテムを Delete Item で削除してください。
+- iCalender データでロードできるアイテムは、半日前から２週間後までです。
+- Next Train データでロードできるアイテムは、今から１時間後までです。
+
+
 以上
