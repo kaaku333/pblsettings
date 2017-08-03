@@ -1,237 +1,294 @@
-# Multi Time Viewer èª¬æ˜Žæ›¸
+# Multi Time Viewer à–¾‘
 
-ç›®æ¬¡
+–ÚŽŸ
 
 [TOC]
 
-## Multi Time Viewer ã¨ã¯
+## Multi Time Viewer ‚Æ‚Í
 
-Multi Time Viewer ã¯ä»»æ„ã®ã‚¤ãƒ™ãƒ³ãƒˆã¾ã§ã®æ™‚é–“ã‚’è¡¨ç¤ºã™ã‚‹ Pebble ã‚¢ãƒ—ãƒªã§ã™ã€‚  
-Pebble Time, Pebble Time Round, Pebble 2 ã§ä½¿ãˆã¾ã™ã€‚
+Multi Time Viewer ‚Í”CˆÓ‚ÌƒCƒxƒ“ƒg‚Ü‚Å‚ÌŽžŠÔ‚ð•\Ž¦‚·‚é Pebble ƒAƒvƒŠ‚Å‚·B  
+Pebble Time, Pebble Time Round, Pebble 2 ‚ÅŽg‚¦‚Ü‚·B
 
-ä»¥ä¸‹ã®ã‚ˆã†ãªã„ã‚ã„ã‚ãªæ™‚é–“ã‚’ä¸€è¦§è¡¨ç¤ºã™ã‚‹ã®ã«ä½¿ãˆã¾ã™ã€‚
+ˆÈ‰º‚Ì‚æ‚¤‚È‚¢‚ë‚¢‚ë‚ÈŽžŠÔ‚ðˆê——•\Ž¦‚·‚é‚Ì‚ÉŽg‚¦‚Ü‚·B
 
-- æ¯Žæ—¥åŒã˜æ™‚é–“ã«ç¹°ã‚Šè¿”ã™ãƒ«ãƒ¼ãƒ†ã‚£ãƒ³ã®æ™‚é–“  
-  å®¶ã‚’å‡ºã‚‹æ™‚é–“ã€æ˜¼é£Ÿã®æ™‚é–“ãªã©
-- ç‰¹å®šã®æ—¥ã‹ã‚‰ã®æ—¥æ•°ã€ç‰¹å®šã®æ—¥ã¾ã§ã®æ—¥æ•°  
-  èª•ç”Ÿæ—¥ã‹ã‚‰ã®æ—¥æ•°ã€å°†æ¥ã®ã‚¤ãƒ™ãƒ³ãƒˆã¾ã§ã®æ—¥æ•°ãªã©
-- Googleã‚«ãƒ¬ãƒ³ãƒ€ãƒ¼ã®æ¬¡ã®ã‚¤ãƒ™ãƒ³ãƒˆã¾ã§ã®æ™‚é–“  
-  ãƒ—ãƒ©ã‚¤ãƒ™ãƒ¼ãƒˆãªäºˆå®šã¾ã§ã®æ™‚é–“ãªã©
-- Outlookã®æ¬¡ã®äºˆå®šã¾ã§ã®æ™‚é–“  
-  ä»•äº‹ã®äºˆå®šã¾ã§ã®æ™‚é–“ãªã©
-- æ¬¡ã®é›»è»Šã¾ã§ã®æ™‚é–“  
-  ã‚ˆãä½¿ã†é§…ã®æ™‚åˆ»è¡¨ã®æ™‚é–“ãªã©
-- ä¸–ç•Œæ™‚è¨ˆ  
-  ä»»æ„ã®å›½ã®æ™‚åˆ»ãªã©
+- –ˆ“ú“¯‚¶ŽžŠÔ‚ÉŒJ‚è•Ô‚·ƒ‹[ƒeƒBƒ“‚ÌŽžŠÔ  
+  ‰Æ‚ðo‚éŽžŠÔA’‹H‚ÌŽžŠÔ‚È‚Ç
+- “Á’è‚Ì“ú‚©‚ç‚Ì“ú”A“Á’è‚Ì“ú‚Ü‚Å‚Ì“ú”  
+  ’a¶“ú‚©‚ç‚Ì“ú”A«—ˆ‚ÌƒCƒxƒ“ƒg‚Ü‚Å‚Ì“ú”‚È‚Ç
+- GoogleƒJƒŒƒ“ƒ_[‚ÌŽŸ‚ÌƒCƒxƒ“ƒg‚Ü‚Å‚ÌŽžŠÔ  
+  ƒvƒ‰ƒCƒx[ƒg‚È—\’è‚Ü‚Å‚ÌŽžŠÔ‚È‚Ç
+- Outlook‚ÌŽŸ‚Ì—\’è‚Ü‚Å‚ÌŽžŠÔ  
+  ŽdŽ–‚Ì—\’è‚Ü‚Å‚ÌŽžŠÔ‚È‚Ç
+- ŽŸ‚Ì“dŽÔ‚Ü‚Å‚ÌŽžŠÔ  
+  ‚æ‚­Žg‚¤‰w‚ÌŽž•\‚ÌŽžŠÔ‚È‚Ç
+- ¢ŠEŽžŒv  
+  ”CˆÓ‚Ì‘‚ÌŽž‚È‚Ç
 
-ç¾åœ¨æ™‚åˆ»ã‚‚ã„ã¤ã‚‚è¡¨ç¤ºã—ã¦ã„ã‚‹ã®ã§ æ™‚è¨ˆã¨ã—ã¦ã‚‚ä½¿ãˆã¾ã™ã€‚
-
-
-## åŸºæœ¬çš„ãªä½¿ã„æ–¹
-
-1. Pebble ã« Multi Time Viewer ã‚¢ãƒ—ãƒªã‚’ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã™ã‚‹
-2. Pebble App ã‹ã‚‰ Multi Time Viewer ã®è¨­å®šç”»é¢ã‚’é–‹ã„ã¦ã€**äºˆå®šæ™‚åˆ»ãƒ•ã‚¡ã‚¤ãƒ«**ãŒã‚ã‚‹ URL ã‚’å…¥åŠ›ã™ã‚‹
-3. è¨­å®šç”»é¢ã® SAVE ãƒœã‚¿ãƒ³ã‚’æŠ¼ã—ã€ã‚¤ãƒ™ãƒ³ãƒˆæ™‚åˆ»è¨­å®šãƒ•ã‚¡ã‚¤ãƒ«ã‚’ Multi Time Viewer ã«ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ã™ã‚‹
-4. Pebble ã§Up/Downãƒœã‚¿ãƒ³ã‚’æŠ¼ã—ã¦ã€ã‚¤ãƒ™ãƒ³ãƒˆã‚’åˆ‡ã‚Šæ›¿ãˆè¡¨ç¤ºã™ã‚‹
+Œ»ÝŽž‚à‚¢‚Â‚à•\Ž¦‚µ‚Ä‚¢‚é‚Ì‚Å ŽžŒv‚Æ‚µ‚Ä‚àŽg‚¦‚Ü‚·B
 
 
-## åˆ©ç”¨å¯èƒ½ãªäºˆå®šæ™‚åˆ»ãƒ•ã‚¡ã‚¤ãƒ«
+## Šî–{“I‚ÈŽg‚¢•û
 
-ä»¥ä¸‹ã®äºˆå®šæ™‚åˆ»ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ãƒãƒƒãƒˆã‹ã‚‰èª­ã¿è¾¼ã‚€ã“ã¨ãŒã§ãã¾ã™ã€‚
-èªè¨¼ãŒå¿…è¦ãŒãªã URL ã§ç›´æŽ¥ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ã§ãã‚‹å ´æ‰€ã«ç½®ã„ã¦ãŠãå¿…è¦ãŒã‚ã‚Šã¾ã™ã€‚
+1. Pebble ‚É Multi Time Viewer ƒAƒvƒŠ‚ðƒCƒ“ƒXƒg[ƒ‹‚·‚é
+2. Pebble App ‚©‚ç Multi Time Viewer ‚ÌÝ’è‰æ–Ê‚ðŠJ‚¢‚ÄA**—\’èŽžƒtƒ@ƒCƒ‹**‚ª‚ ‚é URL ‚ð“ü—Í‚·‚é
+3. Ý’è‰æ–Ê‚Ì SAVE ƒ{ƒ^ƒ“‚ð‰Ÿ‚µAƒCƒxƒ“ƒgŽžÝ’èƒtƒ@ƒCƒ‹‚ð Multi Time Viewer ‚Éƒ_ƒEƒ“ƒ[ƒh‚·‚é
+4. Pebble ‚ÅUp/Downƒ{ƒ^ƒ“‚ð‰Ÿ‚µ‚ÄAƒCƒxƒ“ƒg‚ðØ‚è‘Ö‚¦•\Ž¦‚·‚é
 
-- Time List ãƒ•ã‚©ãƒ¼ãƒžãƒƒãƒˆ(æ‹¡å¼µå­.txt)  
-  Multi TIme Viewer å°‚ç”¨ãƒ•ã‚©ãƒ¼ãƒžãƒƒãƒˆã®ã‚¤ãƒ™ãƒ³ãƒˆå®šç¾©ãƒ†ã‚­ã‚¹ãƒˆãƒ•ã‚¡ã‚¤ãƒ«ã€‚  
-  ï¼‘è¡Œï¼‘ã‚¤ãƒ™ãƒ³ãƒˆã§ãƒ†ã‚­ã‚¹ãƒˆã‚¨ãƒ‡ã‚£ã‚¿ã§ç°¡æ˜“ã«ä½œæˆã™ã‚‹ã“ã¨ãŒã§ãã¾ã™ã€‚
-  + [å®šæœŸçš„ãªäºˆå®š(æ¯Žæ—¥)](MTVdailySample.txt)
-  + [å®šæœŸçš„ãªäºˆå®š(æ¯Žé€±ã€æ¯Žæœˆ)](MTVmonthSample.txt)
-  + [ç‰¹å®šã®æ—¥](MTVyearSample.txt)
-  + [ç¾æ™‚åˆ»ã‹ã‚‰ã®ä»»æ„ã®æ™‚é–“ã‚ªãƒ•ã‚»ãƒƒãƒˆã—ãŸæ™‚é–“(ç¾åœ°æ™‚é–“ãŠã‚ˆã³UTCæ™‚é–“)](MTVworldSample.txt)
-  + [ä»–ã®ãƒ•ã‚©ãƒ¼ãƒžãƒƒãƒˆã®ãƒ•ã‚¡ã‚¤ãƒ«ã®èª­ã¿è¾¼ã¿](MTVdailySample2.txt)
+## —˜—p‰Â”\‚È—\’èŽžƒtƒ@ƒCƒ‹
+
+Ú×‚Í [—˜—p‰Â”\‚È—\’èŽžƒtƒ@ƒCƒ‹‚ÌÚ×](#—˜—p‰Â”\‚È—\’èŽžƒtƒ@ƒCƒ‹‚ÌÚ×) ‚ðŽQÆ‚µ‚Ä‚­‚¾‚³‚¢B
+
+- Time List ƒf[ƒ^(Šg’£Žq.txt)  
+  Multi TIme Viewer ê—pƒtƒH[ƒ}ƒbƒg‚ÌƒCƒxƒ“ƒg’è‹`ƒeƒLƒXƒgƒtƒ@ƒCƒ‹B  
+  ‚Ps‚PƒCƒxƒ“ƒg‚ÅƒeƒLƒXƒgƒGƒfƒBƒ^‚ÅŠÈˆÕ‚Éì¬‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B
+
+- iCalendar ƒf[ƒ^(Šg’£Žq.ics)  
+  ˆê”Ê“I‚È—\’è•\ƒAƒvƒŠ‚ÅŽg‚í‚ê‚é‹¤’ÊƒtƒH[ƒ}ƒbƒg‚Ìƒf[ƒ^B  
+  —á‚¦‚Î Google ƒJƒŒƒ“ƒ_[‚ÌƒŠƒ“ƒN‚â Outlook ‚Å•Û‘¶‚µ‚½ƒtƒ@ƒCƒ‹‚ªŽg‚¦‚Ü‚·B
+ 
+- NextTrain ƒtƒH[ƒ}ƒbƒg(Šg’£Žq.tbl)  
+  ŽŸ‚Ì“dŽÔ‚Ü‚Å‚ÌŽžŠÔ‚ð•\Ž¦‚·‚é‚½‚ß‚ÌƒAƒvƒŠ‚Å‚æ‚­Žg‚í‚ê‚éŽž•\ƒf[ƒ^B  
+  Žž•\ƒTƒCƒg‚Ì‰w‚ÌŽž•\‚©‚ç•ÏŠ·‚µ‚Äì‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B
+
+## •Ö—˜‚È‹@”\
+
+- Äƒ[ƒh‹@”\  
+ ˆê“xƒ[ƒh‚µ‚½—\’èŽžƒtƒ@ƒCƒ‹‚ÍAÄ“x URL ‚ð“ü—Í‚·‚é‚±‚Æ–³‚­AÄƒ[ƒh‚Å‚«‚Ü‚·B  
+   + ¡ƒ[ƒh‚µ‚Ä‚¢‚éƒ^ƒCƒgƒ‹‚ðÄƒ[ƒh‚µ‚½‚¢‚Æ‚«‚ÍAˆê”Êƒƒjƒ…[‚Ì hReload itemsh ‚ð‘I‚ñ‚Å‚­‚¾‚³‚¢B
+  + ¡‚Ìƒ^ƒCƒgƒ‹‚ðŠÜ‚ß‰ß‹Ž‚T‚Â‚Ü‚Å‚Ìƒ^ƒCƒgƒ‹‚ðÄƒ[ƒh‚µ‚½‚¢‚Æ‚«‚ÍAƒŠƒXƒg‚Ìæ“ª‚É‚ ‚éŠY“–‚Ìƒ^ƒCƒgƒ‹‚Ìƒ^ƒCƒgƒ‹ƒƒjƒ…[‚Ì hLOAD" ‚ð‘I‚ñ‚Å‚­‚¾‚³‚¢B
+   + ‰ß‹Ž‚T‚ÂˆÈã‘O‚Éƒ[ƒh‚µ‚½ƒ^ƒCƒgƒ‹‚ðÄƒ[ƒh‚µ‚½‚¢‚Æ‚«‚ÍAƒXƒ}ƒz‚ÌÝ’è‰æ–Ê‚Ì History ‚©‚çŠY“–ƒ^ƒCƒgƒ‹‚ð‘I‚ñ‚Å SAVE ƒ{ƒ^ƒ“‚ð‰Ÿ‚µ‚Ä‚­‚¾‚³‚¢B
+ 
+- ’·‰Ÿ‚µ‹@”\  
+  ƒŠƒXƒg•\Ž¦Žž‚É ENTER ƒ{ƒ^ƒ“‚ð’·‰Ÿ‚µ‚·‚é‚ÆA‚ ‚ç‚©‚¶‚ßÝ’è‚µ‚½ƒƒjƒ…[‚Ì‹@”\‚ð’¼ÚŽÀs‚Å‚«‚Ü‚·B 
+  ˆê”Êƒƒjƒ…[‚Ì "Assign Long Push" ‚ÅÝ’è‚µ‚Ü‚·B 
+   + ˆê”Ê“I‚É‚Í "Goto Next Item" iŒ»ÝŽž‚Éˆê”Ô‹ß‚¢ŽžŠÔ‚ÌƒAƒCƒeƒ€‚ÉˆÚ“®‚·‚éj‚ðÝ’è‚µ‚Ä‚¨‚­‚Ì‚ª•Ö—˜‚Å‚·B
+   + •b•\Ž¦‚ð•p”É‚ÉON/OFF‚µ‚½‚¢‚È‚ç‚Î "Display Second"  i•b•\Ž¦On/Off ‚ðØ‚è‘Ö‚¦‚éjÝ’è‚µ‚Ä‚Ý‚Ä‚­‚¾‚³‚¢B
+   + •À‚Ñ‘Ö‚¦‚½Moreƒƒjƒ…[‚ð‚·‚®‚Éo‚µ‚½‚¢‚È‚ç‚Î "More Menu" ‚ðÝ’è‚·‚é‚Æ‚¢‚¤Žg‚¢•û‚à‚Å‚«‚Ü‚·B
+
+- ƒAƒ‰[ƒ€‹@”\   
+  ŒÂX‚ÌƒAƒCƒeƒ€‚É‚ÍŽžŠÔ‚ª—ˆ‚½‚çU“®‚·‚éƒAƒ‰[ƒ€‚ðTime Listƒf[ƒ^‚à‚µ‚­‚Íƒƒjƒ…[‚ÅŒÂ•Ê‚ÉÝ’è‚Å‚«‚Ü‚·B  
+  ƒAƒ‰[ƒ€‚ªÝ’è‚³‚ê‚Ä‚¢‚éƒAƒCƒeƒ€‚É‚ÍŽc‚èŽžŠÔ‚Ì‘O‚Éƒxƒ‹ƒ}[ƒN‚ÌƒAƒCƒRƒ“‚ª•\Ž¦‚³‚ê‚Ü‚·B
+  + ŒÂX‚ÌƒAƒCƒeƒ€‚ÌƒAƒ‰[ƒ€‚ðŒÂ•Ê‚É On/Off Ø‚è‘Ö‚¦‚Å‚«‚Ü‚·B
+    ˆê”Êƒƒjƒ…[‚Ì hToggle Alarmh ‚ÅÝ’è‚µ‚Ü‚·B
+  + ƒAƒ‰[ƒ€ŽžŠÔ‚ª—ˆ‚½‚çŽ©“®“I‚É –{ƒAƒvƒŠ‚ð‹N“®‚³‚¹‚é‚±‚Æ‚ªo—ˆ‚Ü‚·B  
+   ˆê”Êƒƒjƒ…[‚Ì "Wakeup by Alarm" ‚ÅÝ’è‚µ‚Ü‚·B
+  + Œ»ÝŽž‚©‚ç‚¿‚å‚Á‚Ææ‚ÉƒAƒ‰[ƒ€‚ð’Ç‰Á‚µ‚½‚èA”CˆÓ‚ÌƒCƒxƒ“ƒg‘OŒã‚ÉƒAƒ‰[ƒ€‚ð’Ç‰Á‚µ‚½‚èo—ˆ‚Ü‚·B 
+    ˆê”Êƒƒjƒ…[‚Ì hAdd Now Alarmh ‚â hAdd Alarm itemh ‚ÅÝ’è‚µ‚Ü‚·B 
+  + ‘SƒAƒCƒeƒ€‚ÌƒAƒ‰[ƒ€‚ðˆêŠ‡On/Off‚µ‚½‚èAƒfƒtƒHƒ‹ƒg‚ÌÝ’è‚É–ß‚µ‚½‚èo—ˆ‚Ü‚·B  
+    ˆê”Êƒƒjƒ…[‚Ì hAlarm Modeh ‚ÅÝ’è‚µ‚Ü‚·B
+  + iCalendar ‚Ì—\’è‚ðƒ[ƒh‚·‚é‚Æ‚«‚ÉˆêŠ‡‚µ‚ÄƒAƒ‰[ƒ€On‚É‚·‚éŽ–‚ào—ˆ‚Ü‚·B
+    ƒ^ƒCƒgƒ‹ƒƒjƒ…[‚Ì hiCalendar Alarmh ‚ÅÝ’è‚µ‚Ü‚·B
+
+- ƒXƒ}ƒzØ’fU“®‹@”\
+  Watchface ‚É‚æ‚­‚ ‚éAƒXƒ}ƒz Pebble App ‚Æ‚ÌÚ‘±‚ªØ‚ê‚½‚Æ‚«‚ÉU“®‚·‚é‹@”\‚Å‚·B 
+  ˆê”Êƒƒjƒ…[‚Ì hDisConnect Vibeh ‚ÅÝ’è‚µ‚Ü‚·B
 
 
-- iCalendar ãƒ•ã‚©ãƒ¼ãƒžãƒƒãƒˆ(æ‹¡å¼µå­.ics)  
-  ä¸€èˆ¬çš„ãªäºˆå®šè¡¨ã‚¢ãƒ—ãƒªã§ä½¿ã‚ã‚Œã‚‹å…±é€šãƒ•ã‚©ãƒ¼ãƒžãƒƒãƒˆãƒ‡ãƒ¼ã‚¿ã€‚  
-  ä¾‹ãˆã°ä¸‹è¨˜ã®ã‚ˆã†ãªãƒ‡ãƒ¼ã‚¿ã‚’åˆ©ç”¨ã§ãã¾ã™ã€‚
-  + Google ã‚«ãƒ¬ãƒ³ãƒ€ãƒ¼ã®éžå…¬é–‹ãƒªãƒ³ã‚¯ URL
-  + Outlook ã§ä¿å­˜ã—ãŸ iCalendar ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ dropboxä¸Šã«ç½®ã„ãŸå…¬é–‹ãƒªãƒ³ã‚¯ URL
+## ’Êí‰æ–Ê‚Ì•\Ž¦“à—e‚Æ‘€ì•û–@
 
-- Next Train ãƒ•ã‚©ãƒ¼ãƒžãƒƒãƒˆ(æ‹¡å¼µå­.tbl)  
-  æ¬¡ã®é›»è»Šã¾ã§ã®æ™‚é–“ã‚’è¡¨ç¤ºã™ã‚‹ãŸã‚ã®ã‚¢ãƒ—ãƒªã§ã‚ˆãä½¿ã‚ã‚Œã‚‹æ™‚åˆ»è¡¨ãƒ‡ãƒ¼ã‚¿ã€‚  
-  æœ¬å®¶ã®ã‚¢ãƒ—ãƒªé–‹ç™ºã¯çµ‚äº†ã—ã¦ã¾ã™ãŒã€ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚©ãƒ¼ãƒžãƒƒãƒˆã¨ã—ã¦ã¯ç¶™ç¶šã—ã¦ä½¿ã‚ã‚Œã¦ã¾ã™ã€‚ 
-  + æœ¬å®¶ [NextTrain on the Web](http://office.toyolab.com/nexttrain/)
-  + æ™‚åˆ»è¡¨å¤‰æ›ã‚µã‚¤ãƒˆ [ãˆãã‹ã‚‰æ™‚åˆ»è¡¨â†’NextTrainãƒ‡ãƒ¼ã‚¿](http://toshi-u.sakura.ne.jp/tt2tbl/ej2tbl.html)
-
-
-## ä»˜åŠ æ©Ÿèƒ½
-
-- ã‚¢ãƒ©ãƒ¼ãƒ æ©Ÿèƒ½   
-  å€‹ã€…ã®ã‚¢ã‚¤ãƒ†ãƒ ã«ã¯æ™‚é–“ãŒæ¥ãŸã‚‰æŒ¯å‹•ã™ã‚‹ã‚¢ãƒ©ãƒ¼ãƒ ã‚’Time Listãƒ‡ãƒ¼ã‚¿ã‚‚ã—ãã¯ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã§å€‹åˆ¥ã«è¨­å®šã§ãã¾ã™ã€‚  
-  ã‚¢ãƒ©ãƒ¼ãƒ æ™‚é–“ãŒæ¥ãŸã‚‰è‡ªå‹•çš„ã« æœ¬ã‚¢ãƒ—ãƒªã‚’èµ·å‹•ã•ã›ã‚‹ã“ã¨ã‚‚å‡ºæ¥ã¾ã™ã€‚  
-  ç¾åœ¨æ™‚åˆ»ã‹ã‚‰ã¡ã‚‡ã£ã¨å…ˆã«ã‚¢ãƒ©ãƒ¼ãƒ ã‚’è¿½åŠ ã—ãŸã‚Šã€ä»»æ„ã®ã‚¤ãƒ™ãƒ³ãƒˆå‰å¾Œã«ã‚¢ãƒ©ãƒ¼ãƒ ã‚’è¿½åŠ ã—ãŸã‚Šå‡ºæ¥ã¾ã™ã€‚  
-  å…¨ã‚¢ã‚¤ãƒ†ãƒ ã®ã‚¢ãƒ©ãƒ¼ãƒ ã‚’ä¸€æ‹¬On/Offã—ãŸã‚Šã€ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã®è¨­å®šã«æˆ»ã—ãŸã‚Šå‡ºæ¥ã¾ã™ã€‚  
-  iCalendar ã®äºˆå®šã‚’ãƒ­ãƒ¼ãƒ‰ã™ã‚‹ã¨ãã«ä¸€æ‹¬ã—ã¦ã‚¢ãƒ©ãƒ¼ãƒ Onã«ã™ã‚‹äº‹ã‚‚å‡ºæ¥ã¾ã™ã€‚
-
-- ã‚¹ãƒžãƒ›åˆ‡æ–­æŒ¯å‹•æ©Ÿèƒ½
-  Watchface ã«ã‚ˆãã‚ã‚‹ã€ã‚¹ãƒžãƒ› Pebble App ã¨ã®æŽ¥ç¶šãŒåˆ‡ã‚ŒãŸã¨ãã«æŒ¯å‹•ã™ã‚‹æ©Ÿèƒ½ã§ã™ã€‚
-
-
-## é€šå¸¸ç”»é¢ã®è¡¨ç¤ºå†…å®¹ã¨æ“ä½œæ–¹æ³•
-
-  + å…ˆé ­è¡Œè¡¨ç¤º  
-    ç¾åœ¨æ™‚åˆ»ã€æœˆæ—¥ã€ã‚¹ãƒžãƒ›æŽ¥ç¶šçŠ¶æ…‹
-  + ãƒªã‚¹ãƒˆè¡¨ç¤º  
-    ã‚¿ã‚¤ãƒˆãƒ«ä¸€è¦§ã€ã‚¢ã‚¤ãƒ†ãƒ ä¸€è¦§ã®é †ã«é€£ç¶šã—ã¦ä¸¦ã‚“ã§ã„ã¾ã™
-    * ã‚¿ã‚¤ãƒˆãƒ«ä¸€è¦§  
-      ãƒ­ãƒ¼ãƒ‰ã—ãŸäºˆå®šæ™‚åˆ»ãƒ•ã‚¡ã‚¤ãƒ«ã®ã‚¿ã‚¤ãƒˆãƒ«ã®ä¸€è¦§ã€‚æœ€å¤§ï¼•ã‚¿ã‚¤ãƒˆãƒ«ã¾ã§ä¿æŒã§ãã¾ã™
-    * ã‚¢ã‚¤ãƒ†ãƒ ä¸€è¦§  
-      ãƒ­ãƒ¼ãƒ‰ã—ãŸäºˆå®šæ™‚åˆ»ãƒ•ã‚¡ã‚¤ãƒ«ã®ã‚¢ã‚¤ãƒ†ãƒ ã®ä¸€è¦§ã€‚æœ€å¤§ï¼”ï¼ã‚¢ã‚¤ãƒ†ãƒ ã¾ã§ä¿æŒã§ãã¾ã™
-  + æ“ä½œ  
+  + æ“ªs•\Ž¦  
+    Œ»ÝŽžAŒŽ“úAƒXƒ}ƒzÚ‘±ó‘Ô
+  + ƒŠƒXƒg•\Ž¦  
+    ƒ^ƒCƒgƒ‹ˆê——AƒAƒCƒeƒ€ˆê——‚Ì‡‚É˜A‘±‚µ‚Ä•À‚ñ‚Å‚¢‚Ü‚·
+    * ƒ^ƒCƒgƒ‹ˆê——  
+      ƒ[ƒh‚µ‚½—\’èŽžƒtƒ@ƒCƒ‹‚Ìƒ^ƒCƒgƒ‹‚Ìˆê——BÅ‘å‚Tƒ^ƒCƒgƒ‹‚Ü‚Å•ÛŽ‚Å‚«‚Ü‚·
+    * ƒAƒCƒeƒ€ˆê——  
+      ƒ[ƒh‚µ‚½—\’èŽžƒtƒ@ƒCƒ‹‚ÌƒAƒCƒeƒ€‚Ìˆê——BÅ‘å‚S‚OƒAƒCƒeƒ€‚Ü‚Å•ÛŽ‚Å‚«‚Ü‚·B
+      ƒAƒCƒeƒ€–¼AÝ’èŽžŠÔ(3s•\Ž¦Žž‚Ì‚Ý)AŽc‚èŽžŠÔ ‚ª•\Ž¦‚³‚ê‚Ü‚·B
+  + ‘€ì  
     - Enter  
-      ã‚¿ã‚¤ãƒˆãƒ«ã§æŠ¼ã—ãŸã¨ãã¯ã‚¿ã‚¤ãƒˆãƒ«ãƒ¡ãƒ‹ãƒ¥ãƒ¼è¡¨ç¤ºã€‚ã‚¢ã‚¤ãƒ†ãƒ ã§æŠ¼ã—ãŸã¨ãã¯ä¸€èˆ¬ãƒ¡ãƒ‹ãƒ¥ãƒ¼è¡¨ç¤º
-    - Enter é•·æŠ¼ã—  
-      ä¸€èˆ¬ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã®é•·æŠ¼ã—è¨­å®šã§è¨­å®šã—ãŸãƒ¡ãƒ‹ãƒ¥ãƒ¼é …ç›®ã‚’ç›´æŽ¥å®Ÿè¡Œã™ã‚‹
+      ƒ^ƒCƒgƒ‹‚Å‰Ÿ‚µ‚½‚Æ‚«‚Íƒ^ƒCƒgƒ‹ƒƒjƒ…[•\Ž¦BƒAƒCƒeƒ€‚Å‰Ÿ‚µ‚½‚Æ‚«‚Íˆê”Êƒƒjƒ…[•\Ž¦‚µ‚Ü‚·B
+    - Enter ’·‰Ÿ‚µ  
+      ˆê”Êƒƒjƒ…[‚Ì hAssign Long Pushh ‚ÅÝ’è‚µ‚½ƒƒjƒ…[€–Ú‚ð’¼ÚŽÀs‚µ‚Ü‚·B
     - Up  
-       ãƒªã‚¹ãƒˆã‚’ä¸Šã«ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ã™ã‚‹
+       ƒŠƒXƒg‚ðã‚ÉƒXƒNƒ[ƒ‹‚µ‚Ü‚·B
     - Down  
-       ãƒªã‚¹ãƒˆã‚’ä¸‹ã«ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ã™ã‚‹
+       ƒŠƒXƒg‚ð‰º‚ÉƒXƒNƒ[ƒ‹‚µ‚Ü‚·B
     - Back  
-       æœ¬ã‚¢ãƒ—ãƒªã‚’çµ‚äº†ã™ã‚‹
+       –{ƒAƒvƒŠ‚ðI—¹‚µ‚Ü‚·B
 
 
-## ã‚¿ã‚¤ãƒˆãƒ«ãƒ¡ãƒ‹ãƒ¥ãƒ¼  
+## ƒ^ƒCƒgƒ‹ƒƒjƒ…[  
 
-é€šå¸¸ç”»é¢ã®ã„ãšã‚Œã‹ã®ã‚¿ã‚¤ãƒˆãƒ«ã§ ENTER ãƒœã‚¿ãƒ³ã‚’æŠ¼ã™ã¨è¡¨ç¤ºã•ã‚Œã‚‹ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã€‚  
+’Êí‰æ–Ê‚Ì‚¢‚¸‚ê‚©‚Ìƒ^ƒCƒgƒ‹‚Å ENTER ƒ{ƒ^ƒ“‚ð‰Ÿ‚·‚Æ•\Ž¦‚³‚ê‚éƒƒjƒ…[B  
 
 - LOAD  
-  è©²å½“äºˆå®šæ™‚åˆ»ãƒ•ã‚¡ã‚¤ãƒ«ã‚’å†åº¦ãƒ­ãƒ¼ãƒ‰ã—ã¾ã™ã€‚
+  ŠY“–—\’èŽžƒtƒ@ƒCƒ‹‚ðÄ“xƒ[ƒh‚µ‚Ü‚·B
 
 - DELETE  
-  Pebbleä¸Šã‹ã‚‰è©²å½“äºˆå®šæ™‚åˆ»ãƒ•ã‚¡ã‚¤ãƒ«ã‚’å‰Šé™¤ã—ã¾ã™ã€‚  
-  å…ƒã®äºˆå®šæ™‚åˆ»ãƒ•ã‚¡ã‚¤ãƒ«ã¯æ¶ˆãˆã¾ã›ã‚“ã€‚
+  Pebbleã‚©‚çŠY“–—\’èŽžƒtƒ@ƒCƒ‹‚ðíœ‚µ‚Ü‚·B  
+  Œ³‚Ì—\’èŽžƒtƒ@ƒCƒ‹‚ÍÁ‚¦‚Ü‚¹‚ñB
 
 - NextTrain Holiday  
-  Next Train ãƒ•ã‚©ãƒ¼ãƒžãƒƒãƒˆã‚’ãƒ­ãƒ¼ãƒ‰ã™ã‚‹ã¨ãã«ç¥ç¥­æ—¥æŒ‡å®šã™ã‚‹ã‹ã©ã†ã‹ã‚’è¨­å®šã™ã‚‹ã€‚
-  + Holiday ... ä»Šæ—¥ã‚’ç¥ç¥­æ—¥ã¨ã—ã¦èª­ã¿è¾¼ã‚€
-  + Off ... ä»Šæ—¥ã‚’é€šå¸¸æ—¥ï¼ˆç¥ç¥­æ—¥ã§ã¯ãªã„ï¼‰ã¨ã—ã¦èª­ã¿è¾¼ã‚€
+  Next Train ƒtƒH[ƒ}ƒbƒg‚ðƒ[ƒh‚·‚é‚Æ‚«‚ÉjÕ“úŽw’è‚·‚é‚©‚Ç‚¤‚©‚ðÝ’è‚·‚éB
+  + Holiday ... ¡“ú‚ðjÕ“ú‚Æ‚µ‚Ä“Ç‚Ýž‚Þ
+  + Off ... ¡“ú‚ð’Êí“úijÕ“ú‚Å‚Í‚È‚¢j‚Æ‚µ‚Ä“Ç‚Ýž‚Þ
 
 - iCalendar Alarm  
-  iCalendar ãƒ•ã‚©ãƒ¼ãƒžãƒƒãƒˆã‚’ãƒ­ãƒ¼ãƒ‰ã™ã‚‹ã¨ãã«ã‚¢ãƒ©ãƒ¼ãƒ ãƒ‡ãƒ¼ã‚¿ã¨ã™ã‚‹ã‹è¨­å®šã™ã‚‹ã€‚
-  + Alarm On ... ã‚¢ãƒ©ãƒ¼ãƒ ãƒ‡ãƒ¼ã‚¿ã¨ã—ã¦èª­ã¿è¾¼ã‚€
-  + Alarm Off ... é€šå¸¸ãƒ‡ãƒ¼ã‚¿ï¼ˆã‚¢ãƒ©ãƒ¼ãƒ ãƒ‡ãƒ¼ã‚¿ã§ã¯ãªã„ï¼‰ã¨ã—ã¦èª­ã¿è¾¼ã‚€
+  iCalendar ƒtƒH[ƒ}ƒbƒg‚ðƒ[ƒh‚·‚é‚Æ‚«‚ÉƒAƒ‰[ƒ€ƒf[ƒ^‚Æ‚·‚é‚©Ý’è‚·‚éB
+  + Alarm On ... ƒAƒ‰[ƒ€ƒf[ƒ^‚Æ‚µ‚Ä“Ç‚Ýž‚Þ
+  + Alarm Off ... ’Êíƒf[ƒ^iƒAƒ‰[ƒ€ƒf[ƒ^‚Å‚Í‚È‚¢j‚Æ‚µ‚Ä“Ç‚Ýž‚Þ
 
-## ä¸€èˆ¬ãƒ¡ãƒ‹ãƒ¥ãƒ¼  
+## ˆê”Êƒƒjƒ…[  
 
-é€šå¸¸ç”»é¢ã®ã„ãšã‚Œã‹ã®ã‚¢ã‚¤ãƒ†ãƒ ã§ ENTER ãƒœã‚¿ãƒ³ã‚’æŠ¼ã™ã¨è¡¨ç¤ºã•ã‚Œã‚‹ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã€‚  
-ä¸¦ã³é †ã¯ã‚¹ãƒžãƒ›ä¸Šã®è¨­å®šç”»é¢ã§ä¸¦ã³æ›¿ãˆãŒã§ãã¾ã™ã€‚
+’Êí‰æ–Ê‚Ì‚¢‚¸‚ê‚©‚ÌƒAƒCƒeƒ€‚Å ENTER ƒ{ƒ^ƒ“‚ð‰Ÿ‚·‚Æ•\Ž¦‚³‚ê‚éƒƒjƒ…[B  
+•À‚Ñ‡‚ÍƒXƒ}ƒzã‚ÌÝ’è‰æ–Ê‚Ì hSORT MENU ITEMS" ‚ÅŽ©•ª‚ÌD‚«‚È‡‚É•À‚Ñ‘Ö‚¦‚ª‚Å‚«‚Ü‚·B
 
 - Item Information  
-  ã‚¢ã‚¤ãƒ†ãƒ æƒ…å ±ã‚’è¡¨ç¤ºã™ã‚‹
+  ƒAƒCƒeƒ€î•ñ‚ð•\Ž¦‚·‚é
 - Goto Next Item  
-  ç¾åœ¨æ™‚åˆ»ã«ä¸€ç•ªè¿‘ã„æ™‚é–“ã®ã‚¢ã‚¤ãƒ†ãƒ ã«ç§»å‹•ã™ã‚‹  
-  ã‚½ãƒ¼ãƒˆé †ã‚’æ™‚é–“ã«ã—ã¦ãŠãã“ã¨
+  Œ»ÝŽž‚Éˆê”Ô‹ß‚¢ŽžŠÔ‚ÌƒAƒCƒeƒ€‚ÉˆÚ“®‚·‚é  
+  ‚±‚Ì‹@”\‚ðŽg‚¤‚É‚ÍAƒAƒCƒeƒ€ƒ\[ƒg‡‚ðŽžŠÔ‡‚É‚µ‚Ä‚¨‚­‚±‚Æ
 - Goto Top Item  
-  å…ˆé ­ã®ã‚¢ã‚¤ãƒ†ãƒ ã«ç§»å‹•ã™ã‚‹
-  ã‚¿ã‚¤ãƒˆãƒ«ã«ç§»å‹•ã—ãŸã„æ™‚ã«ã‚‚ä½¿ã†
+  æ“ª‚ÌƒAƒCƒeƒ€‚ÉˆÚ“®‚·‚é
+  ƒ^ƒCƒgƒ‹‚ÉˆÚ“®‚µ‚½‚¢Žž‚É‚àŽg‚¤
 - Push Timeline  
-  è©²å½“ã‚¢ã‚¤ãƒ†ãƒ ã‚’Pebbleã®ã‚¿ã‚¤ãƒ ãƒ©ã‚¤ãƒ³ã«ç™»éŒ²ã™ã‚‹
-  ã†ã¾ãå‹•ã‹ãªã„ã“ã¨ã‚‚ã‚ã‚Šã¾ã™
+  ŠY“–ƒAƒCƒeƒ€‚ðPebble‚Ìƒ^ƒCƒ€ƒ‰ƒCƒ“‚É“o˜^‚·‚é
+  i‚±‚Ì‹@”\‚Í‚¤‚Ü‚­“®‚©‚È‚¢‚±‚Æ‚ª‚ ‚è‚Ü‚·j
 - Toggle Alarm  
-  è©²å½“ã‚¢ã‚¤ãƒ†ãƒ ã®ã‚¢ãƒ©ãƒ¼ãƒ ã®On/Offã‚’åˆ‡ã‚Šæ›¿ãˆã‚‹
+  ŠY“–ƒAƒCƒeƒ€‚ÌƒAƒ‰[ƒ€‚ÌOn/Off‚ðØ‚è‘Ö‚¦‚é
 - Alarm Mode  
-  ã‚¢ãƒ©ãƒ¼ãƒ ã‚’ä¸€æ‹¬On/Off/ãƒ—ãƒªã‚»ãƒƒãƒˆå€¤ã«æˆ»ã™ã‚’å®Ÿè¡Œã™ã‚‹
+  ƒAƒ‰[ƒ€‚ðˆêŠ‡On/Off/ƒvƒŠƒZƒbƒg’l‚É–ß‚·‚ðŽÀs‚·‚é
 - Days Format  
-  çµŒéŽæ—¥æ™‚ã®è¡¨ç¤ºå½¢å¼ã‚’åˆ‡ã‚Šæ›¿ãˆã‚‹
+  Œo‰ß“úŽž‚Ì•\Ž¦Œ`Ž®‚ðØ‚è‘Ö‚¦‚é
 - Periodic Time  
-  å®šæœŸçš„ãªã‚¤ãƒ™ãƒ³ãƒˆã®æ™‚åˆ»ã‚’è¶…ãˆãŸå¾Œã«ç›´ãæœªæ¥ã®äºˆå®šã¨ã—ã¦æ‰±ã†ã‹åŠå‘¨æœŸã¾ã§éŽåŽ»ã®ã‚¤ãƒ™ãƒ³ãƒˆã¨ã—ã¦æ‰±ã†ã‹åˆ‡ã‚Šæ›¿ãˆã‚‹
+  ’èŠú“I‚ÈƒCƒxƒ“ƒg‚ÌŽž‚ð’´‚¦‚½Œã‚É’¼‚®–¢—ˆ‚Ì—\’è‚Æ‚µ‚Äˆµ‚¤‚©”¼ŽüŠú‚Ü‚Å‰ß‹Ž‚ÌƒCƒxƒ“ƒg‚Æ‚µ‚Äˆµ‚¤‚©Ø‚è‘Ö‚¦‚é
 - Sort Items  
-  ã‚¢ã‚¤ãƒ†ãƒ ã®ä¸¦ã³æ›¿ãˆé †ã‚’æ™‚é–“é †ã€åå‰é †ã€ä¸¦ã³æ›¿ãˆç„¡ã—ã‹ã‚‰é¸ã¶ã€‚é€šå¸¸ã¯æ™‚é–“é †ã«ã—ã¦ãŠã
+  ƒAƒCƒeƒ€‚Ì•À‚Ñ‘Ö‚¦‡‚ðŽžŠÔ‡A–¼‘O‡A•À‚Ñ‘Ö‚¦–³‚µ‚©‚ç‘I‚ÔB’Êí‚ÍŽžŠÔ‡‚É‚µ‚Ä‚¨‚­
 - Display Second  
-  ç§’è¡¨ç¤ºOn/Off ã‚’åˆ‡ã‚Šæ›¿ãˆã‚‹
+  •b•\Ž¦On/Off ‚ðØ‚è‘Ö‚¦‚é
 - --- More Menu ---  
-  ã“ã“ã‹ã‚‰ä¸‹ã¯æ‹¡å¼µãƒ¡ãƒ‹ãƒ¥ãƒ¼
+  ‚±‚±‚©‚ç‰º‚ÍŠg’£ƒƒjƒ…[
 - Add Alarm item  
-  è©²å½“ã‚¢ã‚¤ãƒ†ãƒ å‰å¾Œã«ã‚¢ãƒ©ãƒ¼ãƒ ã‚¢ã‚¤ãƒ†ãƒ ã‚’è¿½åŠ ã™ã‚‹
+  ŠY“–ƒAƒCƒeƒ€‘OŒã‚ÉƒAƒ‰[ƒ€ƒAƒCƒeƒ€‚ð’Ç‰Á‚·‚é
 - Add Now Alarm  
-  ç¾åœ¨æ™‚åˆ»ã®è¿‘ãã«ã‚¢ãƒ©ãƒ¼ãƒ ã‚¢ã‚¤ãƒ†ãƒ ã‚’è¿½åŠ ã™ã‚‹
+  Œ»ÝŽž‚Ì‹ß‚­‚ÉƒAƒ‰[ƒ€ƒAƒCƒeƒ€‚ð’Ç‰Á‚·‚é
 - Delete Item  
-  ã‚¢ã‚¤ãƒ†ãƒ ã‚’å‰Šé™¤ã™ã‚‹ã€‚é€šå¸¸ã¯å‹•çš„ã«è¿½åŠ ã—ãŸã‚¢ãƒ©ãƒ¼ãƒ ã‚¢ã‚¤ãƒ†ãƒ ã®å‰Šé™¤ã«ä½¿ã†
+  ƒAƒCƒeƒ€‚ðíœ‚·‚éB’Êí‚Í“®“I‚É’Ç‰Á‚µ‚½ƒAƒ‰[ƒ€ƒAƒCƒeƒ€‚Ìíœ‚ÉŽg‚¤
 - Wakeup by Alarm  
-  ã‚¢ãƒ©ãƒ¼ãƒ ã«ã‚ˆã£ã¦ Multi Time Viewer ã‚’èµ·å‹•ã™ã‚‹ã‹ã©ã†ã‹è¨­å®šã™ã‚‹
+  ƒAƒ‰[ƒ€‚É‚æ‚Á‚Ä Multi Time Viewer ‚ð‹N“®‚·‚é‚©‚Ç‚¤‚©Ý’è‚·‚é
 - Highlight Font  
-  ãƒã‚¤ãƒ©ã‚¤ãƒˆè¡¨ç¤ºã—ã¦ã„ã‚‹ãƒ•ã‚©ãƒ³ãƒˆã®å¤§ãã•ã‚’èª¿æ•´ã™ã‚‹
+  ƒnƒCƒ‰ƒCƒg•\Ž¦‚µ‚Ä‚¢‚éƒtƒHƒ“ƒg‚Ì‘å‚«‚³‚ð’²®‚·‚é
 - Color Theme  
-  ã‚«ãƒ©ãƒ¼ãƒ†ãƒ¼ãƒžã‚’åˆ‡ã‚Šæ›¿ãˆã‚‹
+  ƒJƒ‰[ƒe[ƒ}‚ðØ‚è‘Ö‚¦‚é
 - Assign Long Push  
-  Enter é•·æŠ¼ã—æ™‚ã®å‹•ä½œã‚’ãƒ¡ãƒ‹ãƒ¥ãƒ¼é …ç›®ã®ä¸­ã‹ã‚‰é¸ã¶
+  Enter ’·‰Ÿ‚µŽž‚Ì“®ì‚ðƒƒjƒ…[€–Ú‚Ì’†‚©‚ç‘I‚Ô
 - Date Format  
-  å¹´æœˆæ—¥ã®ä¸¦ã³é †ã‚’è¨­å®šã™ã‚‹
+  ”NŒŽ“ú‚Ì•À‚Ñ‡‚ðÝ’è‚·‚é
 - Time Type  
-  12æ™‚é–“24æ™‚é–“è¡¨ç¤ºã‚’åˆ‡ã‚Šæ›¿ãˆã‚‹
+  12ŽžŠÔ24ŽžŠÔ•\Ž¦‚ðØ‚è‘Ö‚¦‚é
 - DisConnect Vibe  
-  ã‚¹ãƒžãƒ›Appåˆ‡æ–­æ™‚ã«æŒ¯å‹•ã™ã‚‹ã‹ã©ã†ã‹åˆ‡ã‚Šæ›¿ãˆã‚‹
+  ƒXƒ}ƒzAppØ’fŽž‚ÉU“®‚·‚é‚©‚Ç‚¤‚©Ø‚è‘Ö‚¦‚é
 - Reload items  
-  ç¾åœ¨ã®ã‚¿ã‚¤ãƒˆãƒ«ã®ã‚¢ã‚¤ãƒ†ãƒ ã‚’èª­ã¿è¾¼ã¿ç›´ã™
+  Œ»Ý‚Ìƒ^ƒCƒgƒ‹‚ÌƒAƒCƒeƒ€‚ð“Ç‚Ýž‚Ý’¼‚·
 - Three Lines Display  
-  ï¼’è¡Œè¡¨ç¤º(ã‚¿ã‚¤ãƒˆãƒ«ã¨çµŒéŽæ™‚é–“ã®ã¿è¡¨ç¤º)ã€ï¼“è¡Œè¡¨ç¤º(ã‚¢ã‚¤ãƒ†ãƒ ã®ã‚ªãƒªã‚¸ãƒŠãƒ«æ™‚é–“è¡¨ç¤ºä»˜ã)ã‚’åˆ‡ã‚Šæ›¿ãˆã‚‹
+  ‚Qs•\Ž¦(ƒ^ƒCƒgƒ‹‚ÆŒo‰ßŽžŠÔ‚Ì‚Ý•\Ž¦)A‚Rs•\Ž¦(ƒAƒCƒeƒ€‚ÌƒIƒŠƒWƒiƒ‹ŽžŠÔ•\Ž¦•t‚«)‚ðØ‚è‘Ö‚¦‚é
 
-## è¨­å®šç”»é¢ 
+## Ý’è‰æ–Ê 
 
-ã‚¹ãƒžãƒ›ã® Pebble App ã® Apps ã® Multi Time Viewer ã‚’é¸ã‚“ã§è¡¨ç¤ºã™ã‚‹è¨­å®šç”»é¢ã€‚
+ƒXƒ}ƒz‚Ì Pebble App ‚Ì Apps ‚Ì Multi Time Viewer ‚ð‘I‚ñ‚Å•\Ž¦‚·‚éÝ’è‰æ–ÊB
 
 
 ### LOAD TIMELIST
  + TimeList URL  
-   ãƒ­ãƒ¼ãƒ‰ã—ãŸã„äºˆå®šæ™‚åˆ»ãƒ•ã‚¡ã‚¤ãƒ«ãŒç½®ã„ã¦ã‚ã‚‹ URL ã‚’å…¥åŠ›ã™ã‚‹ã€‚
-   ãã®å¾Œ SAVE ã‚’æŠ¼ã™ã¨ Pebble ã«è©²å½“äºˆå®šæ™‚åˆ»ãƒ•ã‚¡ã‚¤ãƒ«ãŒãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ã•ã‚Œã‚‹ã€‚
+   ƒ[ƒh‚µ‚½‚¢—\’èŽžƒtƒ@ƒCƒ‹‚ª’u‚¢‚Ä‚ ‚é URL ‚ð“ü—Í‚·‚éB
+   ‚»‚ÌŒã SAVE ‚ð‰Ÿ‚·‚Æ Pebble ‚ÉŠY“–—\’èŽžƒtƒ@ƒCƒ‹‚ªƒ_ƒEƒ“ƒ[ƒh‚³‚ê‚éB
  + History  
-   éŽåŽ»ã«ãƒ­ãƒ¼ãƒ‰ã—ãŸäºˆå®šæ™‚åˆ»ãƒ•ã‚¡ã‚¤ãƒ«ã®å±¥æ­´ã€‚å†åº¦ãƒ­ãƒ¼ãƒ‰ã—ãŸã„ã¨ãã«é¸ã¶ã€‚ï¼•å€‹ä»¥ä¸Šè¦šãˆã¦ãŠã‘ã‚‹ã€‚
+   ‰ß‹Ž‚Éƒ[ƒh‚µ‚½—\’èŽžƒtƒ@ƒCƒ‹‚Ì—š—ðBÄ“xƒ[ƒh‚µ‚½‚¢‚Æ‚«‚É‘I‚ÔB‚TŒÂˆÈãŠo‚¦‚Ä‚¨‚¯‚éB
  + What is TimeList  
-   äºˆå®šæ™‚åˆ»ãƒ•ã‚¡ã‚¤ãƒ«ã®ç°¡å˜ãªèª¬æ˜Žã€‚
+   —\’èŽžƒtƒ@ƒCƒ‹‚ÌŠÈ’P‚Èà–¾B
  + TimeList Sample  
-   TimeList ã®ã‚µãƒ³ãƒ—ãƒ«ã€‚Put URL ã§ TimeList URL ã« URL å…¥åŠ›ã€‚ Show File ã§ã‚µãƒ³ãƒ—ãƒ«ãƒ†ã‚­ã‚¹ãƒˆã‚’è¡¨ç¤ºã€‚
+   TimeList ‚ÌƒTƒ“ƒvƒ‹BPut URL ‚Å TimeList URL ‚É URL “ü—ÍB Show File ‚ÅƒTƒ“ƒvƒ‹ƒeƒLƒXƒg‚ð•\Ž¦B
  + How to add TimeList  
-   TimeList ã®ç™»éŒ²æ–¹æ³•ã®æ‰‹é †ä¾‹ã€‚
+   TimeList ‚Ì“o˜^•û–@‚ÌŽè‡—áB
 
 ### DELETE TIMELIST
  + Delete Selected History  
-   History ã§ã‚¿ã‚¤ãƒˆãƒ«ã‚’é¸ã‚“ã§ãƒã‚§ãƒƒã‚¯ã—ã¦ã‹ã‚‰ SAVE ã‚’æŠ¼ã™ã¨ã€è©²å½“ã®ã‚¿ã‚¤ãƒˆãƒ«ãŒå±¥æ­´ã‹ã‚‰å‰Šé™¤ã•ã‚Œã‚‹ã€‚
+   History ‚Åƒ^ƒCƒgƒ‹‚ð‘I‚ñ‚Åƒ`ƒFƒbƒN‚µ‚Ä‚©‚ç SAVE ‚ð‰Ÿ‚·‚ÆAŠY“–‚Ìƒ^ƒCƒgƒ‹‚ª—š—ð‚©‚çíœ‚³‚ê‚éB
  + Delete All History  
-   ãƒã‚§ãƒƒã‚¯ã—ã¦ã‹ã‚‰ SAVE ã‚’æŠ¼ã™ã¨ã€History ã®å±¥æ­´ã‚’å…¨å‰Šé™¤ã™ã‚‹ã€‚
+   ƒ`ƒFƒbƒN‚µ‚Ä‚©‚ç SAVE ‚ð‰Ÿ‚·‚ÆAHistory ‚Ì—š—ð‚ð‘Síœ‚·‚éB
  + Delete Loal added items in Pebble  
-   Pebble ã§ç›´æŽ¥è¿½åŠ ã—ãŸã‚¢ãƒ©ãƒ¼ãƒ ã‚¢ã‚¤ãƒ†ãƒ ã‚’å…¨ã¦å‰Šé™¤ã™ã‚‹ã€‚
+   Pebble ‚Å’¼Ú’Ç‰Á‚µ‚½ƒAƒ‰[ƒ€ƒAƒCƒeƒ€‚ð‘S‚Äíœ‚·‚éB
  + Delete All in Pebble  
-   Pebble ä¸Šã®ã‚¿ã‚¤ãƒˆãƒ«ã¨ã‚¢ã‚¤ãƒ†ãƒ ã‚’å…¨ã¦å‰Šé™¤ã™ã‚‹ã€‚
+   Pebble ã‚Ìƒ^ƒCƒgƒ‹‚ÆƒAƒCƒeƒ€‚ð‘S‚Äíœ‚·‚éB
 
 ### SORT MENU ITEMS
  + Menu Items  
-   ä¸€èˆ¬ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã®é …ç›®ã®ä¸¦ã³ã‚’ãƒ‰ãƒ©ãƒƒã‚°ã‚¢ãƒ³ãƒ‰ãƒ‰ãƒ­ãƒƒãƒ—ã§å¤‰æ›´ã—ã¦ SAVE ã‚’æŠ¼ã™ã¨ã€Pebbleã®ä¸€èˆ¬ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã®ä¸¦ã³ã«åæ˜ ã•ã‚Œã‚‹ã€‚
+   ˆê”Êƒƒjƒ…[‚Ì€–Ú‚Ì•À‚Ñ‚ðƒhƒ‰ƒbƒOƒAƒ“ƒhƒhƒƒbƒv‚Å•ÏX‚µ‚Ä SAVE ‚ð‰Ÿ‚·‚ÆAPebble‚Ìˆê”Êƒƒjƒ…[‚Ì•À‚Ñ‚É”½‰f‚³‚ê‚éB
  + Reset Item Sorting  
-   Reset ã‚’æŠ¼ã™ã¨ã€ä¸€èˆ¬ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã®é …ç›®ã®ä¸¦ã³é †ã‚’åˆæœŸçŠ¶æ…‹ã«æˆ»ã™ã€‚
+   Reset ‚ð‰Ÿ‚·‚ÆAˆê”Êƒƒjƒ…[‚Ì€–Ú‚Ì•À‚Ñ‡‚ð‰Šúó‘Ô‚É–ß‚·B
 
-## ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸
+## ƒƒbƒZ[ƒW
 
-è¡¨ç¤ºã•ã‚Œã‚‹ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã®æ„å‘³ã§ã™ã€‚
+•\Ž¦‚³‚ê‚éƒƒbƒZ[ƒW‚Æ‚»‚ÌˆÓ–¡‚Í‰º‹L‚Ì’Ê‚è‚Å‚·B
 
 - Data Loaded  
- Â ãƒ‡ãƒ¼ã‚¿ãŒæ­£å¸¸ã«ãƒ­ãƒ¼ãƒ‰ã§ãã¾ã—ãŸ
+  ƒf[ƒ^‚ª³í‚Éƒ[ƒh‚Å‚«‚Ü‚µ‚½B
 - Data Loaded but overflowed  
- Â ãƒ‡ãƒ¼ã‚¿ã¯ãƒ­ãƒ¼ãƒ‰ã§ãã¾ã—ãŸãŒã€ã‚¢ã‚¤ãƒ†ãƒ æ•°ãŒå¤šã™ãŽã¦å¾Œã‚ã®æ–¹ã®ã‚¢ã‚¤ãƒ†ãƒ ã¯ã‚«ãƒƒãƒˆã—ã¾ã—ãŸ
-- All Title Deleted Â 
- Â å…¨ã‚¿ã‚¤ãƒˆãƒ«ã‚’å‰Šé™¤ã—ã¾ã—ãŸ
-- Local Alarm item Deleted Â 
- Â Pebbleã§ç›´æŽ¥è¿½åŠ ã—ãŸã‚¢ãƒ©ãƒ¼ãƒ ã‚¢ã‚¤ãƒ†ãƒ ã‚’å‰Šé™¤ã—ã¾ã—ãŸ
+  ƒf[ƒ^‚Íƒ[ƒh‚Å‚«‚Ü‚µ‚½‚ªAƒAƒCƒeƒ€”‚ª‚¢‚Á‚Ï‚¢‚Å“Ç‚Ýž‚ß‚È‚¢ƒAƒCƒeƒ€‚ª‚ ‚è‚Ü‚µ‚½B
+- Phone is Disconnected  
+  ƒXƒ}ƒz‚ÌPebble App‚Æ‚ÌÚ‘±‚ªØ‚ê‚Ä‚Ü‚·BƒXƒ}ƒz‚Ì Pebble App ‚ð—§‚¿ã‚°’¼‚µ‚Ä‚Ý‚Ä‚­‚¾‚³‚¢B
+- Items are full  
+  ƒAƒCƒeƒ€”‚ª‚¢‚Á‚Ï‚¢‚Å‚·B‚à‚µƒAƒ‰[ƒ€‚ð’Ç‰Á‚µ‚½‚¢ê‡‚ÍA•K—v‚È‚¢ƒAƒCƒeƒ€‚ðíœ‚µ‚Ä‚­‚¾‚³‚¢B
+- All Title Deleted  
+  ƒXƒ}ƒzÝ’è‰æ–Ê‚©‚ç‚ÌŽwŽ¦’Ê‚èA‘Sƒ^ƒCƒgƒ‹‚ðíœ‚µ‚Ü‚µ‚½B
+- Local Alarm item Deleted  
+  ƒXƒ}ƒzÝ’è‰æ–Ê‚©‚ç‚ÌŽwŽ¦’Ê‚èAPebbleã‚Å’Ç‰Á‚µ‚½ƒAƒ‰[ƒ€ƒAƒCƒeƒ€‚ðíœ‚µ‚Ü‚µ‚½B
 - Server Timeout
 - File not found
 - Server error  
- Â ã‚µãƒ¼ãƒãƒ¼ã‹ã‚‰ãƒ‡ãƒ¼ã‚¿ãƒ­ãƒ¼ãƒ‰ã§ãã¾ã›ã‚“ã§ã—ãŸã€‚ãƒªãƒˆãƒ©ã‚¤ã—ã¦ã¿ã¦ãã ã•ã„
-
-## æ³¨æ„äº‹é …
-
-- ä¸€åº¦ã«ãƒ¡ãƒ¢ãƒªä¸Šã«ä¿æŒã§ãã‚‹ã‚¢ã‚¤ãƒ†ãƒ æ•°ã¯æœ€å¤§40å€‹ã§ã™ã€‚ Â 
- Â å¤šã™ãŽã¦ã‚¢ãƒ©ãƒ¼ãƒ ã‚¢ã‚¤ãƒ†ãƒ ã‚’è¿½åŠ ã§ããªã„å ´åˆã¯ã€ä¸è¦ãªã‚¢ã‚¤ãƒ†ãƒ ã‚’ Delete Item ã§å‰Šé™¤ã—ã¦ãã ã•ã„ã€‚
-- iCalender ãƒ‡ãƒ¼ã‚¿ã§ãƒ­ãƒ¼ãƒ‰ã§ãã‚‹ã‚¢ã‚¤ãƒ†ãƒ ã¯ã€åŠæ—¥å‰ã‹ã‚‰ï¼’é€±é–“å¾Œã¾ã§ã§ã™ã€‚
-- Next Train ãƒ‡ãƒ¼ã‚¿ã§ãƒ­ãƒ¼ãƒ‰ã§ãã‚‹ã‚¢ã‚¤ãƒ†ãƒ ã¯ã€ä»Šã‹ã‚‰ï¼‘æ™‚é–“å¾Œã¾ã§ã§ã™ã€‚
+  ƒtƒ@ƒCƒ‹ƒT[ƒo[‚©‚çƒf[ƒ^‚ðƒ[ƒh‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½B‚¿‚å‚Á‚Æ‘Ò‚Á‚Ä‚©‚çƒŠƒgƒ‰ƒC‚µ‚Ä‚Ý‚Ä‚­‚¾‚³‚¢B‚»‚ê‚Å‚à‘Ê–Ú‚È‚Æ‚«‚ÍƒT[ƒo[‚Ìó‘Ô‚ðŠm”F‚µ‚Ä‚­‚¾‚³‚¢B
 
 
-ä»¥ä¸Š
+## —˜—p‰Â”\‚È—\’èŽžƒtƒ@ƒCƒ‹‚ÌÚ×
+ˆÈ‰º‚Ì—\’èŽžƒtƒ@ƒCƒ‹‚ðƒlƒbƒg‚©‚ç“Ç‚Ýž‚Þ‚±‚Æ‚ª‚Å‚«‚Ü‚·B
+”FØ‚ª•K—v‚ª‚È‚­ URL ‚Å’¼Úƒ_ƒEƒ“ƒ[ƒh‚Å‚«‚éêŠ‚É’u‚¢‚Ä‚¨‚­•K—v‚ª‚ ‚è‚Ü‚·B
+
+- Time List ƒf[ƒ^ (Šg’£Žq.txt)  
+  Multi TIme Viewer ê—pƒtƒH[ƒ}ƒbƒg‚ÌƒCƒxƒ“ƒg’è‹`ƒeƒLƒXƒgƒtƒ@ƒCƒ‹B  
+  ‚Ps‚PƒCƒxƒ“ƒg‚ÅƒeƒLƒXƒgƒGƒfƒBƒ^‚ÅŠÈˆÕ‚Éì¬‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B
+
+  * Time List ƒtƒH[ƒ}ƒbƒg‚ÌƒTƒ“ƒvƒ‹‚Æ‘Ž®
+      + [’èŠú“I‚È—\’è(–ˆ“ú)](MTVdailySample.txt)
+      + [’èŠú“I‚È—\’è(–ˆTA–ˆŒŽ)](MTVmonthSample.txt)
+      + [“Á’è‚Ì“ú](MTVyearSample.txt)
+      + [Œ»Žž‚©‚ç‚Ì”CˆÓ‚ÌŽžŠÔƒIƒtƒZƒbƒg‚µ‚½ŽžŠÔ(Œ»’nŽžŠÔ‚¨‚æ‚ÑUTCŽžŠÔ)](MTVworldSample.txt)
+      + [‘¼‚ÌƒtƒH[ƒ}ƒbƒg‚Ìƒtƒ@ƒCƒ‹‚Ì“Ç‚Ýž‚Ý](MTVdailySample2.txt)
+
+
+- iCalendar ƒf[ƒ^ (Šg’£Žq.ics)  
+  ˆê”Ê“I‚È—\’è•\ƒAƒvƒŠ‚ÅŽg‚í‚ê‚é‹¤’ÊƒtƒH[ƒ}ƒbƒgƒf[ƒ^B  
+  * —á‚¦‚ÎA‰º‹L‚Ì‚æ‚¤‚Èƒf[ƒ^‚ª—˜—p‚Å‚«‚Ü‚·B
+      + Google ƒJƒŒƒ“ƒ_[‚Ì”ñŒöŠJƒŠƒ“ƒN URL 
+          - ƒ[ƒh‚µ‚½‚¢ ƒJƒŒƒ“ƒ_[‚ÌuƒJƒŒƒ“ƒ_[Ý’èv‚Ì’†‚Ì ICAL(”ñŒöŠJURL)‚ðŽg‚Á‚Ä‚­‚¾‚³‚¢B
+      + Outlook ‚Å•Û‘¶‚µ‚½ iCalendar ƒtƒ@ƒCƒ‹‚ð dropboxã‚É’u‚¢‚½‚à‚Ì
+          - •Û‘¶Žž‚ÌÝ’è‚ÅA¡ŒãˆêTŠÔAƒ^ƒCƒgƒ‹‚Ì‚ÝŠÜ‚ÞA‚É‚·‚é‚Ì‚ªŽg‚¢‚â‚·‚¢‚Å‚·B
+  
+  + iCalendar ƒf[ƒ^—˜—pã‚Ì’ˆÓ
+     * iCalender ƒf[ƒ^‚©‚çƒ[ƒh‚Å‚«‚éƒAƒCƒeƒ€‚ÍAŒ»ÝŽž‚Ì”¼“ú‘O‚©‚ç‚QTŠÔŒã‚Ü‚Å‚Å‚·B
+
+- NextTrain ƒtƒH[ƒ}ƒbƒg(Šg’£Žq.tbl)  
+  ”CˆÓ‚Ì‰w‚ÌŽŸ‚Ì“dŽÔ‚Ü‚Å‚ÌŽžŠÔ‚ð•\Ž¦‚·‚é‚½‚ß‚ÌƒAƒvƒŠ‚Å‚æ‚­Žg‚í‚ê‚éŽž•\ƒf[ƒ^B  
+  –{‰Æ‚ÌƒAƒvƒŠŠJ”­‚ÍI—¹‚µ‚Ä‚Ü‚·‚ªAƒf[ƒ^ƒtƒH[ƒ}ƒbƒg‚Æ‚µ‚Ä‚ÍŒp‘±‚µ‚ÄŽg‚í‚ê‚Ä‚Ü‚·B 
+  + –{‰Æ [NextTrain on the Web](http://office.toyolab.com/nexttrain/)
+
+  + Žž•\•ÏŠ·ƒTƒCƒg [‚¦‚«‚©‚çŽž•\¨NextTrainƒf[ƒ^](http://toshi-u.sakura.ne.jp/tt2tbl/ej2tbl.html) ‚È‚Ç‚Å”CˆÓ‚Ì‰w‚ÌŽž•\‚©‚ç NextTrain ƒf[ƒ^‚É•ÏŠ·‚µA‰º‹L‚Ì’ˆÓŽ–€‚ðŒ³‚ÉC³‚µ‚Ä‚©‚ç dropbox ‚È‚Ç‚ÉƒAƒbƒv‚µ‚Ä‚­‚¾‚³‚¢B
+  
+  + NextTrain ƒf[ƒ^C³‚É‚¨‚¯‚é’ˆÓŽ–€
+        * ƒtƒ@ƒCƒ‹‚ÌŠg’£Žq‚Í ".tbl" ‚É‚µ‚Ä‚­‚¾‚³‚¢B‚±‚ê‚Å NextTrainŒ`Ž®‚ðŒ©•ª‚¯‚Ü‚·
+     * ƒtƒ@ƒCƒ‹‚Ì•¶ŽšƒR[ƒh‚Í UTF8 ‚Å•Û‘¶‚µ‚Ä‚­‚¾‚³‚¢BƒVƒtƒgJIS‚¾‚Æ•¶Žš‰»‚¯‚µ‚Ü‚·B
+     * ƒ^ƒCƒgƒ‹(#‚ÅŽn‚Ü‚és)‚Í‘SŠp7•¶Žš’ö“x‚Ék‚ß‚Ä‚­‚¾‚³‚¢B‚±‚ê‚ª‰æ–Ê‚ÌƒŠƒXƒgæ“ª‚Ìƒ^ƒCƒgƒ‹‚Æ‚µ‚ÄŽg‚í‚ê‚Ü‚·B
+     * s‚«æ‚â‹}sŽí•Ê(ƒAƒ‹ƒtƒ@ƒxƒbƒg‚ÅŽn‚Ü‚és)‚ª‚Ps‚É“ü‚è‚«‚ç‚È‚¢ê‡‚Í’Z‚­‚µ‚Ä‚­‚¾‚³‚¢B
+
+   + NextTrain ƒf[ƒ^‚Ì—˜—p‚É‚¨‚¯‚é’ˆÓŽ–€ 
+     * “Ç‚Ýž‚Þƒf[ƒ^‚ÍŒ»ÝŽž‚©‚ç‚PŽžŠÔ•ª‚Å‚·Bƒf[ƒ^‚ªŒÃ‚­‚È‚Á‚½‚çAƒŠƒ[ƒh‚µ‚Ä‚­‚¾‚³‚¢B
+     * jÕ“úƒ_ƒCƒ„‚ð‘I‚Ôê‡‚Í Title Menu ‚É’Ç‰Á‚µ‚½"NextTrain Holiday" Ý’è‚ð"Holiday"‚É‚µ‚Ä‚­‚¾‚³‚¢BjÕ“ú‚Å‚È‚¯‚ê‚Î "Off"‚É‚µ‚Ä‚­‚¾‚³‚¢B‚±‚Ì•ÏX‚ð‚µ‚½‚çƒŠƒ[ƒh‚µ‚Ä‚­‚¾‚³‚¢B
+
+
+## ’ˆÓŽ–€
+
+- ˆê“x‚Éƒƒ‚ƒŠã‚É•ÛŽ‚Å‚«‚éƒAƒCƒeƒ€”‚ÍÅ‘å40ŒÂ‚Å‚·B  
+  ‘½‚·‚¬‚ÄƒAƒ‰[ƒ€ƒAƒCƒeƒ€‚ð’Ç‰Á‚Å‚«‚È‚¢ê‡‚ÍA•s—v‚ÈƒAƒCƒeƒ€‚ð Delete Item ‚Åíœ‚µ‚Ä‚­‚¾‚³‚¢B
+
+
+ˆÈã
