@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multi Time Viewer 説明書</title>
+<link rel="stylesheet" href="https://stackedit.io/res-min/themes/base.css" />
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body><div class="container"><h1 id="multi-time-viewer-説明書">Multi Time Viewer 説明書</h1>
+
+<p>目次</p>
+
+<p><div class="toc">
+<ul>
+<li><a href="#multi-time-viewer-説明書">Multi Time Viewer 説明書</a><ul>
+<li><a href="#multi-time-viewer-とは">Multi Time Viewer とは</a></li>
+<li><a href="#基本的な使い方">基本的な使い方</a></li>
+<li><a href="#利用可能な予定時刻ファイル">利用可能な予定時刻ファイル</a></li>
+<li><a href="#便利な機能">便利な機能</a></li>
+<li><a href="#通常画面の表示内容と操作方法">通常画面の表示内容と操作方法</a></li>
+<li><a href="#タイトルメニュー">タイトルメニュー</a></li>
+<li><a href="#一般メニュー">一般メニュー</a></li>
+<li><a href="#設定画面">設定画面</a><ul>
+<li><a href="#load-timelist">LOAD TIMELIST</a></li>
+<li><a href="#delete-timelist">DELETE TIMELIST</a></li>
+<li><a href="#sort-menu-items">SORT MENU ITEMS</a></li>
+</ul>
+</li>
+<li><a href="#メッセージ">メッセージ</a></li>
+<li><a href="#利用可能な予定時刻ファイルの詳細">利用可能な予定時刻ファイルの詳細</a></li>
+<li><a href="#注意事項">注意事項</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</p>
+
+
+
+<h2 id="multi-time-viewer-とは">Multi Time Viewer とは</h2>
+
+<p>Multi Time Viewer は任意のイベントまでの時間を表示する Pebble アプリです。 <br>
+Pebble Time, Pebble Time Round, Pebble 2 で使えます。</p>
+
+<p>以下のようないろいろな時間を一覧表示するのに使えます。</p>
+
+<ul>
+<li>毎日同じ時間に繰り返すルーティンの時間 <br>
+家を出る時間、昼食の時間など</li>
+<li>特定の日からの日数、特定の日までの日数 <br>
+誕生日からの日数、将来のイベントまでの日数など</li>
+<li>Googleカレンダーの次のイベントまでの時間 <br>
+プライベートな予定までの時間など</li>
+<li>Outlookの次の予定までの時間 <br>
+仕事の予定までの時間など</li>
+<li>次の電車までの時間 <br>
+よく使う駅の時刻表の時間など</li>
+<li>世界時計 <br>
+任意の国の時刻など</li>
+</ul>
+
+<p>現在時刻もいつも表示しているので 時計としても使えます。</p>
+
+
+
+<h2 id="基本的な使い方">基本的な使い方</h2>
+
+<ol>
+<li>Pebble に Multi Time Viewer アプリをインストールする</li>
+<li>Pebble App から Multi Time Viewer の設定画面を開いて、<strong>予定時刻ファイル</strong>がある URL を入力する</li>
+<li>設定画面の SAVE ボタンを押し、イベント時刻設定ファイルを Multi Time Viewer にダウンロードする</li>
+<li>Pebble でUp/Downボタンを押して、イベントを切り替え表示する</li>
+</ol>
+
+
+
+<h2 id="利用可能な予定時刻ファイル">利用可能な予定時刻ファイル</h2>
+
+<p>詳細は <a href="#利用可能な予定時刻ファイルの詳細">利用可能な予定時刻ファイルの詳細</a> を参照してください。</p>
+
+<ul>
+<li><p>Time List データ(拡張子.txt) <br>
+Multi TIme Viewer 専用フォーマットのイベント定義テキストファイル。 <br>
+１行１イベントでテキストエディタで簡易に作成することができます。</p></li>
+<li><p>iCalendar データ(拡張子.ics) <br>
+一般的な予定表アプリで使われる共通フォーマットのデータ。 <br>
+例えば Google カレンダーのリンクや Outlook で保存したファイルが使えます。</p></li>
+<li><p>NextTrain フォーマット(拡張子.tbl) <br>
+次の電車までの時間を表示するためのアプリでよく使われる時刻表データ。 <br>
+時刻表サイトの駅の時刻表から変換して作ることができます。</p></li>
+</ul>
+
+
+
+<h2 id="便利な機能">便利な機能</h2>
+
+<ul>
+<li><p>再ロード機能 <br>
+一度ロードした予定時刻ファイルは、再度 URL を入力すること無く、再ロードできます。  </p>
+
+<ul><li>今ロードしているタイトルを再ロードしたいときは、一般メニューの ”Reload items” を選んでください。</li>
+<li>今のタイトルを含め過去５つまでのタイトルを再ロードしたいときは、リストの先頭にある該当のタイトルのタイトルメニューの ”LOAD” を選んでください。</li>
+<li>過去５つ以上前にロードしたタイトルを再ロードしたいときは、スマホの設定画面の “History” から該当タイトルを選んで SAVE ボタンを押してください。</li></ul></li>
+<li><p>長押し機能 <br>
+リスト表示時に ENTER ボタンを長押しすると、あらかじめ設定したメニューの機能を直接実行できます。  <br>
+一般メニューの “Assign Long Push” で設定します。 </p>
+
+<ul><li>一般的には “Goto Next Item”（現在時刻に一番近い時間のアイテムに移動する）を設定しておくのが便利です。</li>
+<li>秒表示を頻繁にON/OFFしたいならば “Display Second”（秒表示On/Off を切り替える）設定してみてください。</li>
+<li>並び替えたMoreメニューをすぐに出したいならば “More Menu” を設定するという使い方もできます。</li></ul></li>
+<li><p>アラーム機能 <br>
+個々のアイテムには時間が来たら振動するアラームをTime Listデータもしくはメニューで個別に設定できます。 <br>
+アラームが設定されているアイテムには残り時間の前にベルマークのアイコンが表示されます。</p>
+
+<ul><li>個々のアイテムのアラームを個別に On/Off 切り替えできます。 <br>
+一般メニューの “Toggle Alarm” で設定します。</li>
+<li>アラーム時間が来たら自動的に 本アプリを起動させることが出来ます。 <br>
+一般メニューの “Wakeup by Alarm” で設定します。</li>
+<li>現在時刻からちょっと先にアラームを追加したり、任意のイベント前後にアラームを追加したり出来ます。  <br>
+一般メニューの “Add Now Alarm” や “Add Alarm item” で設定します。</li>
+<li>全アイテムのアラームを一括On/Offしたり、デフォルトの設定に戻したり出来ます。 <br>
+一般メニューの “Alarm Mode” で設定します。</li>
+<li>iCalendar の予定をロードするときに一括してアラームOnにする事も出来ます。 <br>
+タイトルメニューの “iCalendar Alarm” で設定します。</li></ul></li>
+<li><p>スマホ切断振動機能 <br>
+Watchface によくある、スマホ Pebble App との接続が切れたときに振動する機能です。 <br>
+一般メニューの “DisConnect Vibe” で設定します。</p></li>
+</ul>
+
+
+
+<h2 id="通常画面の表示内容と操作方法">通常画面の表示内容と操作方法</h2>
+
+<ul>
+<li>先頭行表示 <br>
+現在時刻、月日、スマホ接続状態を表示。</li>
+<li>リスト表示 <br>
+タイトル一覧、アイテム一覧の順に連続して並んでいます。 <br>
+<ul><li>タイトル一覧 <br>
+ロードした予定時刻ファイルのタイトルの一覧。最大５タイトルまで保持できます。</li>
+<li>アイテム一覧 <br>
+ロードした予定時刻ファイルのアイテムの一覧。最大４０アイテムまで保持できます。 <br>
+アイテム名、設定時間(3行表示時のみ)、残り時間 が表示されます。</li></ul></li>
+<li>操作 <br>
+<ul><li>Enter <br>
+タイトルで押したときはタイトルメニュー表示。アイテムで押したときは一般メニュー表示します。</li>
+<li>Enter 長押し <br>
+一般メニューの “Assign Long Push” で設定したメニュー項目を直接実行します。</li>
+<li>Up <br>
+リストを上にスクロールします。</li>
+<li>Down <br>
+リストを下にスクロールします。</li>
+<li>Back <br>
+本アプリを終了します。</li></ul></li>
+</ul>
+
+
+
+<h2 id="タイトルメニュー">タイトルメニュー</h2>
+
+<p>通常画面のいずれかのタイトルで ENTER ボタンを押すと表示されるメニュー。  </p>
+
+<ul>
+<li><p>LOAD <br>
+該当予定時刻ファイルを再度ロードします。</p></li>
+<li><p>DELETE <br>
+Pebble上から該当予定時刻ファイルを削除します。 <br>
+元の予定時刻ファイルは消えません。</p></li>
+<li><p>NextTrain Holiday <br>
+Next Train フォーマットをロードするときに祝祭日指定するかどうかを設定する。</p>
+
+<ul><li>Holiday … 今日を祝祭日として読み込む</li>
+<li>Off … 今日を通常日（祝祭日ではない）として読み込む</li></ul></li>
+<li><p>iCalendar Alarm <br>
+iCalendar フォーマットをロードするときにアラームデータとするか設定する。</p>
+
+<ul><li>Alarm On … アラームデータとして読み込む</li>
+<li>Alarm Off … 通常データ（アラームデータではない）として読み込む</li></ul></li>
+</ul>
+
+
+
+<h2 id="一般メニュー">一般メニュー</h2>
+
+<p>通常画面のいずれかのアイテムで ENTER ボタンを押すと表示されるメニュー。 <br>
+並び順はスマホ上の設定画面の ”SORT MENU ITEMS” で自分の好きな順に並び替えができます。</p>
+
+<ul>
+<li>Item Information <br>
+アイテム情報を表示する</li>
+<li>Goto Next Item <br>
+現在時刻に一番近い時間のアイテムに移動する <br>
+この機能を使うには、アイテムソート順を時間順にしておくこと</li>
+<li>Goto Top Item <br>
+先頭のアイテムに移動する <br>
+タイトルに移動したい時にも使う</li>
+<li>Push Timeline <br>
+該当アイテムをPebbleのタイムラインに登録する <br>
+（この機能はうまく動かないことがあります）</li>
+<li>Toggle Alarm <br>
+該当アイテムのアラームのOn/Offを切り替える</li>
+<li>Alarm Mode <br>
+アラームを一括On/Off/プリセット値に戻すを実行する</li>
+<li>Days Format <br>
+経過日時の表示形式を切り替える</li>
+<li>Periodic Time <br>
+定期的なイベントの時刻を超えた後に直ぐ未来の予定として扱うか半周期まで過去のイベントとして扱うか切り替える</li>
+<li>Sort Items <br>
+アイテムの並び替え順を時間順、名前順、並び替え無しから選ぶ。通常は時間順にしておく</li>
+<li>Display Second <br>
+秒表示On/Off を切り替える</li>
+<li>— More Menu — <br>
+ここから下は拡張メニュー</li>
+<li>Add Alarm item <br>
+該当アイテム前後にアラームアイテムを追加する</li>
+<li>Add Now Alarm <br>
+現在時刻の近くにアラームアイテムを追加する</li>
+<li>Delete Item <br>
+アイテムを削除する。通常は動的に追加したアラームアイテムの削除に使う</li>
+<li>Wakeup by Alarm <br>
+アラームによって Multi Time Viewer を起動するかどうか設定する</li>
+<li>Highlight Font <br>
+ハイライト表示しているフォントの大きさを調整する</li>
+<li>Color Theme <br>
+カラーテーマを切り替える</li>
+<li>Assign Long Push <br>
+Enter 長押し時の動作をメニュー項目の中から選ぶ</li>
+<li>Date Format <br>
+年月日の並び順を設定する</li>
+<li>Time Type <br>
+12時間24時間表示を切り替える</li>
+<li>DisConnect Vibe <br>
+スマホApp切断時に振動するかどうか切り替える</li>
+<li>Reload items <br>
+現在のタイトルのアイテムを読み込み直す</li>
+<li>Three Lines Display <br>
+２行表示(タイトルと経過時間のみ表示)、３行表示(アイテムのオリジナル時間表示付き)を切り替える</li>
+</ul>
+
+
+
+<h2 id="設定画面">設定画面</h2>
+
+<p>スマホの Pebble App の Apps の Multi Time Viewer を選んで表示する設定画面。</p>
+
+
+
+<h3 id="load-timelist">LOAD TIMELIST</h3>
+
+<ul>
+<li>TimeList URL <br>
+ロードしたい予定時刻ファイルが置いてある URL を入力する。 <br>
+その後 SAVE を押すと Pebble に該当予定時刻ファイルがダウンロードされる。</li>
+<li>History <br>
+過去にロードした予定時刻ファイルの履歴。再度ロードしたいときに選ぶ。５個以上覚えておける。</li>
+<li>What is TimeList <br>
+予定時刻ファイルの簡単な説明。</li>
+<li>TimeList Sample <br>
+TimeList のサンプル。Put URL で TimeList URL に URL 入力。 Show File でサンプルテキストを表示。</li>
+<li>How to add TimeList <br>
+TimeList の登録方法の手順例。</li>
+</ul>
+
+
+
+<h3 id="delete-timelist">DELETE TIMELIST</h3>
+
+<ul>
+<li>Delete Selected History <br>
+History でタイトルを選んでチェックしてから SAVE を押すと、該当のタイトルが履歴から削除される。</li>
+<li>Delete All History <br>
+チェックしてから SAVE を押すと、History の履歴を全削除する。</li>
+<li>Delete Loal added items in Pebble <br>
+Pebble で直接追加したアラームアイテムを全て削除する。</li>
+<li>Delete All in Pebble <br>
+Pebble 上のタイトルとアイテムを全て削除する。</li>
+</ul>
+
+
+
+<h3 id="sort-menu-items">SORT MENU ITEMS</h3>
+
+<ul>
+<li>Menu Items <br>
+一般メニューの項目の並びをドラッグアンドドロップで変更して SAVE を押すと、Pebbleの一般メニューの並びに反映される。</li>
+<li>Reset Item Sorting <br>
+Reset を押すと、一般メニューの項目の並び順を初期状態に戻す。</li>
+</ul>
+
+
+
+<h2 id="メッセージ">メッセージ</h2>
+
+<p>表示されるメッセージとその意味は下記の通りです。</p>
+
+<ul>
+<li>Data Loaded <br>
+データが正常にロードできました。</li>
+<li>Data Loaded but overflowed <br>
+データはロードできましたが、アイテム数がいっぱいで読み込めないアイテムがありました。</li>
+<li>Phone is Disconnected <br>
+スマホのPebble Appとの接続が切れてます。スマホの Pebble App を立ち上げ直してみてください。</li>
+<li>Items are full <br>
+アイテム数がいっぱいです。もしアラームを追加したい場合は、必要ないアイテムを削除してください。</li>
+<li>All Title Deleted <br>
+スマホ設定画面からの指示通り、全タイトルを削除しました。</li>
+<li>Local Alarm item Deleted <br>
+スマホ設定画面からの指示通り、Pebble上で追加したアラームアイテムを削除しました。</li>
+<li>Server Timeout</li>
+<li>File not found</li>
+<li>Server error <br>
+ファイルサーバーからデータをロードできませんでした。ちょっと待ってからリトライしてみてください。それでも駄目なときはサーバーの状態を確認してください。</li>
+</ul>
+
+
+
+<h2 id="利用可能な予定時刻ファイルの詳細">利用可能な予定時刻ファイルの詳細</h2>
+
+<p>以下の予定時刻ファイルをネットから読み込むことができます。 <br>
+認証が必要がなく URL で直接ダウンロードできる場所に置いておく必要があります。</p>
+
+<ul>
+<li><p>Time List データ (拡張子.txt) <br>
+Multi TIme Viewer 専用フォーマットのイベント定義テキストファイル。 <br>
+１行１イベントでテキストエディタで簡易に作成することができます。</p>
+
+<ul><li>Time List フォーマットの書式説明付きサンプル <br>
+<ul><li><a href="MTVdailySample.txt">定期的な予定(毎日)</a></li>
+<li><a href="MTVmonthSample.txt">定期的な予定(毎週、毎月)</a></li>
+<li><a href="MTVyearSample.txt">特定の日</a></li>
+<li><a href="MTVworldSample.txt">現時刻からの任意の時間オフセットした時間(現地時間およびUTC時間)</a></li>
+<li><a href="MTVdailySample2.txt">他のフォーマットのファイルの読み込み</a></li></ul></li></ul></li>
+<li><p>iCalendar データ (拡張子.ics) <br>
+一般的な予定表アプリで使われる共通フォーマットデータ。  </p>
+
+<ul><li><p>例えば、下記のようなデータが利用できます。</p>
+
+<ul><li>Google カレンダーの非公開リンク URL  <br>
+<ul><li>ロードしたい カレンダーの「カレンダー設定」の中の ICAL(非公開URL)を使ってください。</li></ul></li>
+<li>Outlook で保存した iCalendar ファイルを dropbox上に置いたもの <br>
+<ul><li>保存時の詳細設定で、今後一週間＆タイトルのみ含む、にするのがいいです。</li></ul></li></ul></li>
+<li><p>iCalendar データ利用上の注意</p>
+
+<ul><li>iCalender データからロードできるアイテムは、現在時刻の半日前から２週間後までです。</li></ul></li></ul></li>
+<li><p>NextTrain フォーマット(拡張子.tbl) <br>
+任意の駅の次の電車までの時間を表示するためのアプリでよく使われる時刻表データ。 <br>
+本家のアプリ開発は終了してますが、データフォーマットとしては継続して使われてます。 </p>
+
+<ul><li><p>本家 <a href="http://office.toyolab.com/nexttrain/">NextTrain on the Web</a></p></li>
+<li><p>時刻表変換サイト <a href="http://toshi-u.sakura.ne.jp/tt2tbl/ej2tbl.html">えきから時刻表→NextTrainデータ</a> などで任意の駅の時刻表から NextTrain データに変換し、下記の注意事項を元に修正してから dropbox などにアップしてください。</p></li>
+<li><p>NextTrain データ修正における注意事項</p>
+
+<ul><li>ファイルの拡張子は “.tbl” にしてください。これで NextTrain形式を見分けます</li>
+<li>ファイルの文字コードは UTF8 で保存してください。シフトJISだと文字化けします。</li>
+<li>タイトル(#で始まる行)は全角7文字程度に縮めてください。これが画面のリスト先頭のタイトルとして使われます。</li>
+<li>行き先や急行種別(アルファベットで始まる行)が１行に入りきらない場合は短くしてください。</li></ul></li>
+<li><p>NextTrain データの利用における注意事項 </p>
+
+<ul><li>読み込むデータは現在時刻から１時間分です。データが古くなったら、リロードしてください。</li>
+<li>祝祭日ダイヤを選ぶ場合は Title Menu に追加した “NextTrain Holiday” 設定を “Holiday” にしてください。祝祭日でなければ “Off” にしてください。この変更をしたらリロードしてください。</li></ul></li></ul></li>
+</ul>
+
+
+
+<h2 id="注意事項">注意事項</h2>
+
+<ul>
+<li>一度にメモリ上に保持できるアイテム数は最大40個です。 <br>
+多すぎてアラームアイテムを追加できない場合は、不要なアイテムを “Delete Item” で削除してください。</li>
+</ul>
+
+<p>以上</p></div></body>
+</html>
