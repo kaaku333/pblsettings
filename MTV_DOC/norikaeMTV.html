@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>乗り換え to MTV</title>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport">
+  </head>
+  <body>
+    <h3>乗り換え案内テキスト TO Multi Time Viewerデータ 変換</h3>
+
+    <p><a href="#" onclick="history.back();">Back</a></p>
+
+  	<b>変換元：</b>乗り換え案内 テキスト
+    <br/>
+	  <textarea id="norikae_input" cols=40 rows=20 style="overflow:auto;"></textarea>
+	  <p/>
+    乗り換え案内サービス
+    <select id="service_select">
+      <option value="auto">自動</option>
+      <option value="ekitan">駅探</option>
+      <option value="yahoo">Yahoo 乗換案内</option>
+      <option value="navitime">NAVITIME</option>
+      <option value="jorudan">ジョルダン</option>
+    </select>
+    <p/>
+	  <input type="button" id="trans_button" value="変換" style="border-radius:2px;font-size:larger;"/>
+	  <p/>
+	  <b>変換先：</b>Multi Time Viewerデータ
+	  <br/>
+	  <textarea id="mtv_input" cols=40 rows=12 style="overflow:auto;"></textarea>
+
+    <p/>
+    <h4>利用までの手順</h4>
+    <ol>
+      <li>dropbox などのクラウドファイルサーバーに norikae.txt のようなファイル名で空のテキストファイルを作っておく</li>
+      <li><a href="http://ekitan.com/">駅探</a>などの乗り換え案内のサイトで乗り換え案内検索する</li>
+      <li>使いたい検索結果で、メール送信やテキストのボタンを押してテキスト表示する</li>
+      <li>検索結果テキストをコピーして、本ページの「変換元」エリアにペーストする</li>
+      <li>「変換」ボタンを押して、Multi Time Viewer 形式に変換する</li>
+      <li>「変換先」エリアの結果をコピーして、1 で作ったテキストファイルにペーストする</li>
+      <li>１のテキストファイルのダウンロード URL をコピーして、Multi Time Viewer の設定画面の TimeList URL にペーストする</li>
+      <li>SAVE ボタンを押して Pebble にロードする</li>
+    </ol>
+
+    <p/>
+    <h4>備考</h4>
+    <ul>
+      <li>乗り換え案内サービスは複数対応していて、基本的に自動判別します</li>
+      <li>もしうまく変換できなかったら、明示的に乗り換え案内サービスを選択してから変換してください</li>
+      <li>それでもうまく変換できないことがあったら、変換元の乗り換え案内テキストとそれを取得した URL をお知らせください</li>
+    </ul>
+
+
+    <script>
+
+      var norikaeInput = document.getElementById("norikae_input");
+      var mtvInput = document.getElementById("mtv_input");
+      var serviceSelect = document.getElementById("service_select");
+
+
+      function getNorikaeStr(){
+        return document.getElementById("norikae_input").value;
+      }
+      function setMtvStr(str){
+        document.getElementById("mtv_input").value = str;
+      }
+      function getService(norikaeStr){
+        var service =  serviceSelect.options[serviceSelect.selectedIndex].value;
+
+        if(service == "auto"){
+          service =  detectService(norikaeStr);
+        }
+        return service;
+      }
+
+      function detectService(norikaeStr){
+        if(norikaeStr.match(/(ekitan|駅探)/)){
+          return "ekitan";
+        }
+        if(norikaeStr.match(/^\[出発\] /)){
+          return "ekitan";
+        }
+        if(norikaeStr.match(/(ジョルダン|Jorudan)/)){
+          return "jorudan";
+        }
+
+        if(norikaeStr.match(/(yahoo|Yahoo)/)){
+          return "yahoo";
+        }
+
+        if(norikaeStr.match(/(NAVITIME|navitime)/)){
+          return "navitime";
+        }
+        return "ekitan";
+      }
+
+      var scanEkitan = function(norikaeStr){
+        var lines = norikaeStr.split(/[\n\r]+/);
+        var isInNorikae = false;
+        var startStation = "";
+        var station = "";
+        var timestr = "";
+
+        var title = "";
+        var times = [];
+
+        for(var i = 0; i < lines.length; i++){
+          var line = lines[i];
+
+          if(! isInNorikae){
+            if(line.match(/^(\[出発\]|●)/)){
+               station = line.replace(/^(\[出発\]|●)\s*([^[]+).*$/,"$2");
+               startStation = station;
+              isInNorikae = true;
+            }
+          }else{
+            if(line.match(/^(│|｜)[^\d]*\d+:\d+発/)){  // | 12:34発
+              timestr = line.replace(/^(│|｜)[^\d]*(\d+):(\d+).*$/, "$2:$3");
+              times.push({ type: "from", station: station, timestr: timestr});
+            }else if(line.match(/^(│|｜)[^\d]*\d+:\d+着/)){ // | △12:34着
+              timestr = line.replace(/^(│|｜)[^\d]*(\d+):(\d+).*$/, "$2:$3");
+            }else if(line.match(/^\[/)){  // [乗換] 渋谷[きっぷ390円]
+              station = line.replace(/^\[[^[]+\]\s*([^[]+).*$/,"$1");
+              times.push({ type: "to", station: station, timestr: timestr});
+            }else if(line.match(/^(○|■|↓|●)/)){
+              station = line.replace(/^(○|■|↓|●)([^[]+).*$/,"$2");
+              times.push({ type: "to", station: station, timestr: timestr});
+            }else if(line.match(/^(│|｜)/)){
+              // ignore
+            }else{
+              break;
+            }
+          }
+        }
+        title = startStation + "→" + station;
+
+        return { title: title, times : times };
+      }
+
+
+      var scanNavitime = function(norikaeStr){
+        var lines = norikaeStr.split(/[\n\r]+/);
+        var isInNorikae = false;
+        var startStation = "";
+        var station = "";
+        var timestr = "";
+
+        var title = "";
+        var times = [];
+
+        for(var i = 0; i < lines.length; i++){
+          var line = lines[i];
+
+          if(! isInNorikae){
+            if(line.match(/^\d+:\d+発/)){
+               station = line.replace(/^(\d+):(\d+)[^\s]+\s+([^\s]+).*$/,"$3");
+               timestr = line.replace(/^(\d+):(\d+)[^\s]+\s+([^\s]+).*$/,"$1:$2");
+               times.push({ type: "from", station: station, timestr: timestr});
+               startStation = station;
+              isInNorikae = true;
+            }
+          }else{
+            if(line.match(/^\d+:\d+発/)){
+               station = line.replace(/^(\d+):(\d+)[^\s]+\s+([^\s]+).*$/,"$3");
+               timestr = line.replace(/^(\d+):(\d+)[^\s]+\s+([^\s]+).*$/,"$1:$2");
+               times.push({ type: "from", station: station, timestr: timestr});
+            }else if(line.match(/^\d+:\d+着/)){
+               station = line.replace(/^(\d+):(\d+)[^\s]+\s+([^\s]+).*$/,"$3");
+               timestr = line.replace(/^(\d+):(\d+)[^\s]+\s+([^\s]+).*$/,"$1:$2");
+               times.push({ type: "to", station: station, timestr: timestr});
+            }
+          }
+        }
+        title = startStation + "→" + station;
+
+        return { title: title, times : times };
+      }
+
+
+      var scanJorudan = function(norikaeStr){
+        var lines = norikaeStr.split(/[\n\r]+/);
+        var isInNorikae = false;
+        var startStation = "";
+        var station = "";
+        var timestr = "";
+
+        var title = "";
+        var times = [];
+
+        for(var i = 0; i < lines.length; i++){
+          var line = lines[i];
+
+          if(! isInNorikae){
+            if(line.match(/^■/)){
+               station = line.replace(/^■([^\s]+).*$/,"$1");
+               startStation = station;
+              isInNorikae = true;
+            }
+          }else{
+            if(line.match(/^(│|｜)[^\d]*\d+:\d+-\d+:\d+/)){  // | 12:24-13:45
+              timestr = line.replace(/^(│|｜)[^\d]*(\d+):(\d+)-(\d+):(\d+).*$/, "$2:$3");
+              times.push({ type: "from", station: station, timestr: timestr});
+              timestr = line.replace(/^(│|｜)[^\d]*(\d+):(\d+)-(\d+):(\d+).*$/, "$4:$5");
+            }else if(line.match(/^(○|■|●|◇)/)){
+              station = line.replace(/^(○|■|◇|●)([^\s]+).*$/,"$2");
+              times.push({ type: "to", station: station, timestr: timestr});
+            }else if(line.match(/^(│|｜)/)){
+              // ignore
+            }else{
+              break;
+            }
+          }
+        }
+        title = startStation + "→" + station;
+
+        return { title: title, times : times };
+      }
+
+      var scanYahoo = function(norikaeStr){
+        var lines = norikaeStr.split(/[\n\r]+/);
+        var isInNorikae = false;
+        var startStation = "";
+        var station = "";
+        var timestr = "";
+
+        var title = "";
+        var times = [];
+
+        for(var i = 0; i < lines.length; i++){
+          var line = lines[i];
+
+          if(! isInNorikae){
+            if(line.match(/^■/)){
+               station = line.replace(/^■([^\s]+).*$/,"$1");
+               startStation = station;
+              isInNorikae = true;
+            }
+          }else{
+            if(line.match(/^↓[^\d]*\d+:\d+～\d+:\d+/)){  // ↓ 12:24〜13:45
+              timestr = line.replace(/^↓[^\d]*(\d+):(\d+)～(\d+):(\d+).*$/, "$1:$2");
+              times.push({ type: "from", station: station, timestr: timestr});
+              timestr = line.replace(/^↓[^\d]*(\d+):(\d+)～(\d+):(\d+).*$/, "$3:$4");
+            }else if(line.match(/^(○|■|●|◇)/)){
+              station = line.replace(/^(○|■|◇|●)([^\s]+).*$/,"$2");
+              times.push({ type: "to", station: station, timestr: timestr});
+            }else if(line.match(/^↓/)){
+              // ignore
+            }else{
+              break;
+            }
+          }
+        }
+        title = startStation + "→" + station;
+
+        return { title: title, times : times };
+      }
+
+
+      function getScanFunc(service){
+        if(service == "ekitan"){
+          return scanEkitan;
+        }
+        if(service == "yahoo"){
+          return scanYahoo;
+        }
+        if(service == "jorudan"){
+          return scanJorudan;
+        }
+        if(service == "navitime"){
+          return scanNavitime;
+        }
+        return scanEkitan;
+      }
+
+
+      function convMtvTimeStr(timestr){
+        var mtvTimeStr = timestr.replace(/:/, ";");
+        return mtvTimeStr;
+      }
+
+      function makeMtvStr(norikaeInfo){
+        var mtvStr = "";
+        mtvStr += norikaeInfo.title+"\n";
+        for(var i = 0; i < norikaeInfo.times.length; i++){
+          var item = norikaeInfo.times[i];
+          mtvStr += "!D;"+item.station+" "+((item.type == "from")?"発":"着")+";"+convMtvTimeStr(item.timestr)+"\n";
+
+        }
+        return mtvStr;
+      }
+
+
+      var transButton = document.getElementById("trans_button");
+      transButton.addEventListener("click", 
+        function() {
+        	var norikaeStr = getNorikaeStr();
+          var service = getService(norikaeStr);
+          var scanFunc = getScanFunc(service);
+        	var norikaeInfo = scanFunc(norikaeStr);
+          var mtvStr = makeMtvStr(norikaeInfo);
+        	setMtvStr(mtvStr);
+        }, 
+      false);       
+    
+	</script>
+  </body>
+<html>
