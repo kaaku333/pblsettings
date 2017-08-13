@@ -236,10 +236,11 @@
               isInNorikae = true;
             }
           }else{
-            if(line.match(/^↓[^\d]*\d+:\d+～\d+:\d+/)){  // ↓ 12:24〜13:45
-              timestr = line.replace(/^↓[^\d]*(\d+):(\d+)～(\d+):(\d+).*$/, "$1:$2");
+            if(line.match(/^↓[^\d]*\d+:\d+[～〜]\d+:\d+/)){  // ↓ 12:24〜13:45 
+              // (ウェーブダッシュと全角チルダ両方の場合があるので、どちらも対応する)
+              timestr = line.replace(/^↓[^\d]*(\d+):(\d+)[～〜](\d+):(\d+).*$/, "$1:$2");
               times.push({ type: "from", station: station, timestr: timestr});
-              timestr = line.replace(/^↓[^\d]*(\d+):(\d+)～(\d+):(\d+).*$/, "$3:$4");
+              timestr = line.replace(/^↓[^\d]*(\d+):(\d+)[～〜](\d+):(\d+).*$/, "$3:$4");
             }else if(line.match(/^(○|■|●|◇)/)){
               station = line.replace(/^(○|■|◇|●)([^\s]+).*$/,"$2");
               times.push({ type: "to", station: station, timestr: timestr});
